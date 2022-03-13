@@ -1,0 +1,19 @@
+{
+  "name": "dogfoot",
+  "version": "1.0.0",
+  "repository": "https://github.com/thoratica/dogfoot.git",
+  "license": "MIT",
+  "scripts": {
+    "build": "tailwindcss -i src/styles.css -o dist/styles.css",
+    "watch": "tailwindcss --watch -i src/styles.css -o dist/styles.css"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.2",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.8",
+    "tailwindcss": "^3.0.23"
+  },
+  "dependencies": {
+    "pretendard": "^1.2.1"
+  }
+}

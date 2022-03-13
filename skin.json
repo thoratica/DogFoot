@@ -1,0 +1,37 @@
+{
+  "name": "DogFoot",
+  "version": "1.0.0",
+  "author": "thoratica <me@tica.fun>",
+  "url": "https://github.com/thoratica",
+  "descriptionmsg": "DogFoot, a MediaWiki skin.",
+  "namemsg": "DogFoot",
+  "license-name": "MIT",
+  "type": "skin",
+  "requires": {
+    "MediaWiki": ">= 1.35.0"
+  },
+  "ValidSkinNames": {
+    "dogfoot": "DogFoot"
+  },
+  "ResourceModules": {
+    "skins.dogfoot": {
+      "styles": {
+        "dist/styles.css": {
+          "media": "all"
+        },
+        "fonts/pretendardvariable.css": {
+          "media": "all"
+        }
+      }
+    }
+  },
+  "AutoloadClasses": {
+    "SkinDogFoot": "src/DogFoot.skin.php",
+    "DogFootTemplate": "src/DogFoot.template.php"
+  },
+  "ResourceFileModulePaths": {
+    "localBasePath": "",
+    "remoteSkinPath": "DogFoot"
+  },
+  "manifest_version": 1
+}

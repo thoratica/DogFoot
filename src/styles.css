@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 로그인, 계정 만들기 버튼 */
+
 #pt-login a,
 #pt-createaccount a {
   @apply font-medium text-gray-900 hover:underline decoration-dotted decoration-gray-800 !important;
 }
+
+/* 프로필 호버 메뉴 */
 
 .profile .fixed ul li.mw-list-item {
   @apply m-0;
@@ -14,6 +18,8 @@
 .profile .fixed ul li.mw-list-item a {
   @apply inline-block px-3 py-2 font-medium text-[15px] text-gray-900 hover:bg-gray-100 no-underline w-full h-full rounded-md;
 }
+
+/* 분류 */
 
 .catlinks {
   @apply flex border-0 bg-transparent m-0 p-0 mt-1.5 !important;
@@ -47,6 +53,172 @@
   @apply bg-red-50 text-red-500 hover:text-red-500/80 focus:text-red-500/80 decoration-red-400 !important;
 }
 
+/* ===== 목차 ===== */
+
+/* 목차 블록 */
+#post #toc {
+  @apply flex flex-col w-max max-w-full bg-gray-100 border-2 border-gray-100 rounded-2xl px-4 py-2.5 mt-3 leading-none text-[15px] before:content-["목차"] before:text-gray-500 before:text-sm before:w-max before:leading-none before:select-none !important;
+}
+
+/* 목차 타이틀, 숨기기/보이기 버튼 */
+#post #toc .toctitle {
+  @apply hidden;
+}
+
+/* 최상위 링크 목록 */
+#post #toc ul {
+  @apply my-0 list-none;
+}
+
+/* 최상위 링크 목록 항목 */
+#post #toc ul li {
+  @apply my-2;
+}
+
+/* 최상위 아닌 링크 목록 */
+#post #toc ul li ul {
+  @apply ml-5 !important;
+}
+
+/* =============== */
+
+/* ===== 본문 헤딩 ===== */
+
+/* h1 */
+#post h1 {
+  @apply font-semibold text-4xl border-gray-200 mb-2;
+}
+
+/* h2 */
+#post h2 {
+  @apply font-semibold text-2xl border-gray-200 mb-2;
+}
+
+/* h3 */
+#post h3 {
+  @apply font-semibold text-xl border-gray-200 mb-2;
+}
+
+/* h4, h5, h6 - 크기가 작으면 읽기 어려워 고정 */
+#post h4,
+#post h5,
+#post h6 {
+  @apply font-semibold text-lg border-gray-200 mb-2;
+}
+
+/* =============== */
+
+/* ===== 본문 링크 ===== */
+
+/* 기본 스타일 */
+#post a {
+  @apply decoration-dotted hover:underline focus:underline outline-none transition-colors duration-300 ease-in-out;
+}
+
+/* 존재하는 내부 문서로의 링크 */
+#post a:not(.new, .external) {
+  @apply text-blue-500 hover:text-blue-500/80 focus:text-blue-500/80 decoration-blue-400;
+}
+
+/* 존재하지 않는 내부 문서로의 링크 */
+#post a.new {
+  @apply text-red-500 hover:text-red-500/80 focus:text-red-500/80 decoration-red-400;
+}
+
+/* 외부 페이지로의 링크 */
+#post a.external {
+  @apply text-emerald-600 before:content-[""] before:h-[15px] before:w-[15px] before:mr-0.5 before:relative before:top-0.5 before:inline-block before:bg-emerald-600 before:bg-[url("https://wiki.tica.fun/images/5/58/Link.svg")] before:bg-85% before:bg-no-repeat before:bg-center before:rounded-[4px] !important;
+}
+
+/* =============== */
+
+/* == 본문 리스트 == */
+
+#post ul {
+  @apply list-disc;
+}
+
+/* =============== */
+
+/* ==== 테이블 ==== */
+
+table {
+  @apply bg-gray-100 border-0 rounded-[10px] border-separate [border-spacing:_0];
+}
+
+table thead,
+table tbody,
+table tr {
+  @apply border-0;
+}
+
+table tr th,
+table tr td {
+  @apply px-2 py-2 border border-gray-200;
+}
+
+table tr:first-child *:first-child {
+  @apply rounded-tl-[10px];
+}
+
+table tr:first-child *:last-child {
+  @apply rounded-tr-[10px];
+}
+
+table tr:last-child *:first-child {
+  @apply rounded-bl-[10px];
+}
+
+table tr:last-child *:last-child {
+  @apply rounded-br-[10px];
+}
+
+/* table {
+  @apply w-max border-0 rounded-[10px] bg-gray-100;
+}
+
+table tr {
+  @apply border-gray-200 !important;
+}
+
+table tr td {
+  @apply border px-3.5 py-2.5 leading-none !important;
+}
+
+table tr td:not(:last-child) {
+  @apply border-r border-gray-200 !important;
+}
+
+table tr td * {
+  @apply leading-none;
+}
+
+table tr:first-child td:first-child {
+  @apply rounded-tl-[10px];
+}
+
+table tr:first-child td:last-child {
+  @apply rounded-tr-[10px];
+}
+
+table tr:last-child td:first-child {
+  @apply rounded-bl-[10px];
+}
+
+table tr:last-child td:last-child {
+  @apply rounded-br-[10px];
+} */
+
+/* =============== */
+
+.prose p {
+  @apply my-2;
+}
+
+.prose ul li {
+  /* @apply m-0 mb-[0.1rem]; */
+}
+
 .prose #mw-content-text * {
   @apply outline-none;
 }
@@ -71,12 +243,24 @@
   @apply pl-2;
 }
 
+.prose #mw-content-text ul li span.tocnumber {
+  @apply font-normal after:content-['.'] !important;
+}
+
 .prose #mw-content-text ul li.toclevel-1 {
   @apply p-0;
 }
 
+.prose #mw-content-text > :not(#toc) > ul {
+  @apply pl-6 my-2 !important;
+}
+
+.prose #mw-content-text > :not(#toc) > ul li {
+  @apply pl-0 mt-0 mb-0.5 marker:text-gray-400;
+}
+
 .wikitable {
-  @apply text-center w-max border-0 rounded-[10px] bg-gray-100;
+  @apply w-max border-0 rounded-[10px] bg-gray-100;
 }
 
 .wikitable tr {
@@ -84,7 +268,7 @@
 }
 
 .wikitable tr td {
-  @apply border-0 px-3.5 py-2.5 leading-none !important;
+  @apply border px-3.5 py-2.5 leading-none !important;
 }
 
 .wikitable tr td:not(:last-child) {

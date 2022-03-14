@@ -1089,6 +1089,29 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(239 68 68 / 0.8) !important;
 }
 
+.prose a.external[href] {
+  --tw-text-opacity: 1;
+  color: rgb(5 150 105 / var(--tw-text-opacity));
+}
+
+.prose a.external[href]::before {
+  position: relative;
+  top: 0.125rem;
+  margin-right: 0.125rem;
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border-radius: 4px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(5 150 105 / var(--tw-bg-opacity));
+  background-image: url("https://wiki.tica.fun/images/5/58/Link.svg");
+  background-size: 85%;
+  background-position: center;
+  background-repeat: no-repeat;
+  --tw-content: "";
+  content: var(--tw-content);
+}
+
 /* html {
   font-family: 'Noto Sans KR', sans-serif;
   background-color: #f1f1f1;

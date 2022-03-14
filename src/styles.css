@@ -35,6 +35,10 @@
   @apply text-red-500 hover:text-red-500/80 focus:text-red-500/80 decoration-red-400 !important;
 }
 
+.prose a.external[href] {
+  @apply text-emerald-600 before:content-[""] before:h-[15px] before:w-[15px] before:mr-0.5 before:relative before:top-0.5 before:inline-block before:bg-emerald-600 before:bg-[url("https://wiki.tica.fun/images/5/58/Link.svg")] before:bg-85% before:bg-no-repeat before:bg-center before:rounded-[4px];
+}
+
 /* html {
   font-family: 'Noto Sans KR', sans-serif;
   background-color: #f1f1f1;

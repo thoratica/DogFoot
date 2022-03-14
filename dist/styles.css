@@ -902,22 +902,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 1.5rem !important;
 }
 
-.h-16 {
-  height: 4rem !important;
-}
-
-.h-6 {
-  height: 1.5rem !important;
-}
-
-.h-16 {
-  height: 4rem !important;
-}
-
-.h-6 {
-  height: 1.5rem !important;
-}
-
 .min-h-screen {
   min-height: 100vh !important;
 }
@@ -930,42 +914,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: -webkit-max-content !important;
   width: -moz-max-content !important;
   width: max-content !important;
-}
-
-.w-full {
-  width: 100% !important;
-}
-
-.w-max {
-  width: -webkit-max-content !important;
-  width: -moz-max-content !important;
-  width: max-content !important;
-}
-
-.w-full {
-  width: 100% !important;
-}
-
-.w-max {
-  width: -webkit-max-content !important;
-  width: -moz-max-content !important;
-  width: max-content !important;
-}
-
-.max-w-7xl {
-  max-width: 80rem !important;
-}
-
-.max-w-none {
-  max-width: none !important;
-}
-
-.max-w-7xl {
-  max-width: 80rem !important;
-}
-
-.max-w-none {
-  max-width: none !important;
 }
 
 .max-w-7xl {
@@ -1008,36 +956,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 1rem !important;
 }
 
-.px-3 {
-  padding-left: 0.75rem !important;
-  padding-right: 0.75rem !important;
-}
-
-.py-6 {
-  padding-top: 1.5rem !important;
-  padding-bottom: 1.5rem !important;
-}
-
-.py-4 {
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;
-}
-
-.px-3 {
-  padding-left: 0.75rem !important;
-  padding-right: 0.75rem !important;
-}
-
-.py-6 {
-  padding-top: 1.5rem !important;
-  padding-bottom: 1.5rem !important;
-}
-
-.py-4 {
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;
-}
-
 .text-3xl {
   font-size: 1.875rem !important;
   line-height: 2.25rem !important;
@@ -1050,16 +968,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-gray-900 {
   --tw-text-opacity: 1 !important;
   color: rgb(17 24 39 / var(--tw-text-opacity)) !important;
-}
-
-.decoration-gray-400 {
-  -webkit-text-decoration-color: #9ca3af !important;
-          text-decoration-color: #9ca3af !important;
-}
-
-.decoration-dotted {
-  -webkit-text-decoration-style: dotted !important;
-          text-decoration-style: dotted !important;
 }
 
 .outline-none {
@@ -1160,6 +1068,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(59 130 246 / 0.8) !important;
   --tw-brightness: brightness(.95) !important;
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
+}
+
+.prose a.new[href], #catlinks a.new[href] {
+  --tw-text-opacity: 1 !important;
+  color: rgb(239 68 68 / var(--tw-text-opacity)) !important;
+  -webkit-text-decoration-color: #f87171 !important;
+          text-decoration-color: #f87171 !important;
+}
+
+.prose a.new[href]:hover, #catlinks a.new[href]:hover {
+  color: rgb(239 68 68 / 0.8) !important;
+}
+
+.prose a.new[href]:focus, #catlinks a.new[href]:focus {
+  color: rgb(239 68 68 / 0.8) !important;
 }
 
 /* html {
@@ -1269,11 +1192,6 @@ ul {
   z-index: 60 !important;
 } */
 
-.hover\:underline:hover {
-  -webkit-text-decoration-line: underline !important;
-          text-decoration-line: underline !important;
-}
-
 .focus\:brightness-95:focus {
   --tw-brightness: brightness(.95) !important;
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
@@ -1290,22 +1208,6 @@ ul {
 .prose-headings\:border-gray-200 :is(:where(h1, h2, h3, h4, th):not(:where([class~="not-prose"] *))) {
   --tw-border-opacity: 1 !important;
   border-color: rgb(229 231 235 / var(--tw-border-opacity)) !important;
-}
-
-.prose-headings\:pb-1\.5 :is(:where(h1, h2, h3, h4, th):not(:where([class~="not-prose"] *))) {
-  padding-bottom: 0.375rem !important;
-}
-
-.prose-headings\:pb-1 :is(:where(h1, h2, h3, h4, th):not(:where([class~="not-prose"] *))) {
-  padding-bottom: 0.25rem !important;
-}
-
-.prose-headings\:pb-1\.5 :is(:where(h1, h2, h3, h4, th):not(:where([class~="not-prose"] *))) {
-  padding-bottom: 0.375rem !important;
-}
-
-.prose-headings\:pb-1 :is(:where(h1, h2, h3, h4, th):not(:where([class~="not-prose"] *))) {
-  padding-bottom: 0.25rem !important;
 }
 
 .prose-headings\:pb-1\.5 :is(:where(h1, h2, h3, h4, th):not(:where([class~="not-prose"] *))) {
@@ -1349,37 +1251,9 @@ ul {
     width: 100% !important;
   }
 
-  .xs\:w-full {
-    width: 100% !important;
-  }
-
-  .xs\:w-full {
-    width: 100% !important;
-  }
-
   .xs\:px-6 {
     padding-left: 1.5rem !important;
     padding-right: 1.5rem !important;
-  }
-
-  .xs\:px-6 {
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
-  }
-
-  .xs\:px-6 {
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
-  }
-
-  .xs\:text-4xl {
-    font-size: 2.25rem !important;
-    line-height: 2.5rem !important;
-  }
-
-  .xs\:text-4xl {
-    font-size: 2.25rem !important;
-    line-height: 2.5rem !important;
   }
 
   .xs\:text-4xl {

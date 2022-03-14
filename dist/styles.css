@@ -1293,11 +1293,55 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 0px;
 }
 
-.prose #mw-content-text table {
+.wikitable {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  border-radius: 10px;
+  border-width: 0px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
   text-align: center;
+}
+
+.wikitable tr {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity)) !important;
+}
+
+.wikitable tr td {
+  border-width: 0px !important;
+  padding-left: 0.875rem !important;
+  padding-right: 0.875rem !important;
+  padding-top: 0.625rem !important;
+  padding-bottom: 0.625rem !important;
+  line-height: 1 !important;
+}
+
+.wikitable tr td:not(:last-child) {
+  border-right-width: 1px !important;
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity)) !important;
+}
+
+.wikitable tr td * {
+  line-height: 1;
+}
+
+.wikitable tr:first-child td:first-child {
+  border-top-left-radius: 10px;
+}
+
+.wikitable tr:first-child td:last-child {
+  border-top-right-radius: 10px;
+}
+
+.wikitable tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+.wikitable tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
 }
 
 /* .catlinks-allhidden {

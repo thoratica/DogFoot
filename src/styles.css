@@ -75,8 +75,40 @@
   @apply p-0;
 }
 
-.prose #mw-content-text table {
-  @apply text-center w-max;
+.wikitable {
+  @apply text-center w-max border-0 rounded-[10px] bg-gray-100;
+}
+
+.wikitable tr {
+  @apply border-gray-200 !important;
+}
+
+.wikitable tr td {
+  @apply border-0 px-3.5 py-2.5 leading-none !important;
+}
+
+.wikitable tr td:not(:last-child) {
+  @apply border-r border-gray-200 !important;
+}
+
+.wikitable tr td * {
+  @apply leading-none;
+}
+
+.wikitable tr:first-child td:first-child {
+  @apply rounded-tl-[10px];
+}
+
+.wikitable tr:first-child td:last-child {
+  @apply rounded-tr-[10px];
+}
+
+.wikitable tr:last-child td:first-child {
+  @apply rounded-bl-[10px];
+}
+
+.wikitable tr:last-child td:last-child {
+  @apply rounded-br-[10px];
 }
 
 /* .catlinks-allhidden {

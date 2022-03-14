@@ -103,13 +103,13 @@ class DogFootTemplate extends BaseTemplate
                           <a href="<?php echo $this->data['content_actions']['history']['href'] ?? '#' ?>" class="text-gray-900 hover:bg-gray-100 outline-none transition-colors duration-300 ease-in-out rounded-xl px-3 py-2" title="역사">
                             <i class="fa-solid fa-clock-rotate-left text-gray-500"></i>
                           </a>
-                          <a href="<?php echo $this->data['content_actions']['move']['href'] ?? '#' ?>" class="text-gray-900 hover:bg-gray-100 outline-none transition-colors duration-300 ease-in-out rounded-xl px-3 py-2" title="이동">
+                          <a href="<?php echo $this->data['content_actions']['move']['href'] ?? '#' ?>" class="hover:bg-gray-100 outline-none transition-colors duration-300 ease-in-out rounded-xl px-3 py-2" title="이동">
                             <i class="fa-solid fa-angles-right text-gray-500"></i>
                           </a>
-                          <a href="<?php echo $this->data['content_actions']['delete']['href'] ?? '#' ?>" class="text-gray-900 hover:bg-gray-100 outline-none transition-colors duration-300 ease-in-out rounded-xl px-3 py-2" title="삭제">
+                          <a href="<?php echo $this->data['content_actions']['delete']['href'] ?? '#' ?>" class="hover:bg-gray-100 outline-none transition-colors duration-300 ease-in-out rounded-xl px-3 py-2" title="삭제">
                             <i class="fa-solid fa-trash text-gray-500"></i>
                           </a>
-                          <a href="<?php echo $this->data['content_actions']['protect']['href'] ?? '#' ?>" class="text-gray-900 hover:bg-gray-100 outline-none transition-colors duration-300 ease-in-out rounded-xl px-3 py-2" title="보호">
+                          <a href="<?php echo $this->data['content_actions']['protect']['href'] ?? '#' ?>" class="hover:bg-gray-100 outline-none transition-colors duration-300 ease-in-out rounded-xl px-3 py-2" title="보호">
                             <i class="fa-solid fa-lock text-gray-500"></i>
                           </a>
                         </div>
@@ -117,7 +117,7 @@ class DogFootTemplate extends BaseTemplate
                     </div>
                   <?php
                   } else { ?>
-                    <a href="<?php echo $this->data['content_actions']['history']['href'] ?? '#' ?>" class="text-gray-900 hover:bg-gray-100 outline-none transition-colors duration-300 ease-in-out rounded-xl px-3 py-2" title="역사">
+                    <a href="<?php echo $this->data['content_actions']['history']['href'] ?? '#' ?>" class="bg-gray-100 hover:bg-gray-200 outline-none transition-colors duration-300 ease-in-out rounded-xl px-3 py-2" title="역사">
                       <i class="fa-solid fa-clock-rotate-left text-gray-500"></i>
                     </a>
                   <?php

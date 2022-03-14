@@ -142,45 +142,55 @@
 
 /* ==== 테이블 ==== */
 
-table {
+#post table {
   @apply bg-gray-100 font-medium border-0 rounded-[10px] border-separate [border-spacing:_0] !important;
 }
 
-table thead,
-table tbody,
-table tr {
+#post table thead,
+#post table tbody,
+#post table tr {
   @apply border-0 !important;
 }
 
-table tr th,
-table tr td {
+#post table tr th,
+#post table tr td {
   @apply px-4 py-1.5 border-0 border-r border-b border-gray-200 !important;
 }
 
-table tr th:first-child,
-table tr td:first-child {
+#post table tr th:first-child,
+#post table tr td:first-child {
   @apply border-l !important;
 }
 
-table tr th {
+#post table tr th {
   @apply border-t !important;
 }
 
-table tr:first-child *:first-child {
+#post table tr:first-child *:first-child {
   @apply rounded-tl-[10px] !important;
 }
 
-table tr:first-child *:last-child {
+#post table tr:first-child *:last-child {
   @apply rounded-tr-[10px] !important;
 }
 
-table tr:last-child *:first-child {
+#post table tr:last-child *:first-child {
   @apply rounded-bl-[10px] !important;
 }
 
-table tr:last-child *:last-child {
+#post table tr:last-child *:last-child {
   @apply rounded-br-[10px] !important;
 }
+
+/* =============== */
+
+/* ===== 각주 ===== */
+
+#post .mw-references-wrap .references {
+  @apply m-0 list-decimal marker:text-gray-500 !important;
+}
+
+/* =============== */
 
 /* table {
   @apply w-max border-0 rounded-[10px] bg-gray-100;
@@ -217,8 +227,6 @@ table tr:last-child td:first-child {
 table tr:last-child td:last-child {
   @apply rounded-br-[10px];
 } */
-
-/* =============== */
 
 /* 
 .prose p {

@@ -96,20 +96,20 @@ class DogFootTemplate extends BaseTemplate
                       <i class="fa-solid fa-caret-down text-gray-500"></i>
                     </button>
                     <div class="fixed h-0">
-                      <ul class="relative bg-gray-50 p-1.5 border border-gray-50 shadow-lg rounded-lg right-[calc(100%_-_42px)] opacity-0 invisible transform -translate-y-4 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:visible group-hover:translate-x-1 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-x-1 group-focus-within:translate-y-0">
-                        <li href="<?php echo $this->data['content_actions']['history']['href'] ?? '#' ?>" class="text-gray-900 hover:bg-gray-100 outline-none transition-colors duration-300 ease-in-out rounded-xl px-3 py-2" title="역사">
+                      <div class="flex relative bg-gray-50 p-1.5 border border-gray-50 shadow-lg rounded-lg right-[calc(100%_-_42px)] opacity-0 invisible transform -translate-y-4 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:visible group-hover:translate-x-1 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-x-1 group-focus-within:translate-y-0">
+                        <a href="<?php echo $this->data['content_actions']['history']['href'] ?? '#' ?>" class="text-gray-900 hover:bg-gray-100 outline-none transition-colors duration-300 ease-in-out rounded-xl px-3 py-2" title="역사">
                           <i class="fa-solid fa-clock-rotate-left text-gray-500"></i>
-                        </li>
-                        <li href="<?php echo $this->data['content_actions']['move']['href'] ?? '#' ?>" class="text-gray-900 hover:bg-gray-100 outline-none transition-colors duration-300 ease-in-out rounded-xl px-3 py-2" title="이동">
+                        </a>
+                        <a href="<?php echo $this->data['content_actions']['move']['href'] ?? '#' ?>" class="text-gray-900 hover:bg-gray-100 outline-none transition-colors duration-300 ease-in-out rounded-xl px-3 py-2" title="이동">
                           <i class="fa-solid fa-angles-right text-gray-500"></i>
-                        </li>
-                        <li href="<?php echo $this->data['content_actions']['delete']['href'] ?? '#' ?>" class="text-gray-900 hover:bg-gray-100 outline-none transition-colors duration-300 ease-in-out rounded-xl px-3 py-2" title="삭제">
+                        </a>
+                        <a href="<?php echo $this->data['content_actions']['delete']['href'] ?? '#' ?>" class="text-gray-900 hover:bg-gray-100 outline-none transition-colors duration-300 ease-in-out rounded-xl px-3 py-2" title="삭제">
                           <i class="fa-solid fa-trash text-gray-500"></i>
-                        </li>
-                        <li href="<?php echo $this->data['content_actions']['protect']['href'] ?? '#' ?>" class="text-gray-900 hover:bg-gray-100 outline-none transition-colors duration-300 ease-in-out rounded-xl px-3 py-2" title="보호">
+                        </a>
+                        <a href="<?php echo $this->data['content_actions']['protect']['href'] ?? '#' ?>" class="text-gray-900 hover:bg-gray-100 outline-none transition-colors duration-300 ease-in-out rounded-xl px-3 py-2" title="보호">
                           <i class="fa-solid fa-lock text-gray-500"></i>
-                        </li>
-                      </ul>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>

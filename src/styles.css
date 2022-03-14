@@ -143,18 +143,27 @@
 /* ==== 테이블 ==== */
 
 table {
-  @apply bg-gray-100 border-0 rounded-[10px] border-separate [border-spacing:_0];
+  @apply bg-gray-100 font-medium border-0 rounded-[10px] border-separate [border-spacing:_0] !important;
 }
 
 table thead,
 table tbody,
 table tr {
-  @apply border-0;
+  @apply border-0 !important;
 }
 
 table tr th,
 table tr td {
-  @apply px-2 py-2 border border-gray-200 !important;
+  @apply px-4 py-1.5 border-0 border-r border-b border-gray-200 !important;
+}
+
+table tr th:first-child,
+table tr td:first-child {
+  @apply border-l !important;
+}
+
+table tr th {
+  @apply border-t !important;
 }
 
 table tr:first-child *:first-child {

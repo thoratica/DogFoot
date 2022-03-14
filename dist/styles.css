@@ -1059,29 +1059,29 @@ table thead, table tbody, table tr {
 }
 
 table tr th, table tr td {
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity));
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  border-width: 1px !important;
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity)) !important;
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
 }
 
 table tr:first-child *:first-child {
-  border-top-left-radius: 10px;
+  border-top-left-radius: 10px !important;
 }
 
 table tr:first-child *:last-child {
-  border-top-right-radius: 10px;
+  border-top-right-radius: 10px !important;
 }
 
 table tr:last-child *:first-child {
-  border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 10px !important;
 }
 
 table tr:last-child *:last-child {
-  border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px !important;
 }
 
 /* table {
@@ -1122,158 +1122,90 @@ table tr:last-child td:last-child {
 
 /* =============== */
 
+/* 
 .prose p {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  @apply my-2;
 }
 
 .prose ul li {
-  /* @apply m-0 mb-[0.1rem]; */
+  @apply m-0 mb-[0.1rem];
 }
 
 .prose #mw-content-text * {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
+  @apply outline-none;
 }
 
 .prose #mw-content-text p {
-  line-height: 1.25rem;
+  @apply leading-5;
 }
 
 .prose #mw-content-text #toc {
-  margin-top: 0.75rem;
-  display: flex;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  flex-direction: column;
-  border-radius: 1rem;
-  border-width: 2px;
-  --tw-border-opacity: 1;
-  border-color: rgb(243 244 246 / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
-  font-size: 15px;
-  line-height: 1;
-}
-
-.prose #mw-content-text #toc::before {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  line-height: 1;
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
-  --tw-content: "목차";
-  content: var(--tw-content);
+  @apply flex flex-col w-max bg-gray-100 border-2 border-gray-100 rounded-2xl px-4 py-2.5 mt-3 leading-none text-[15px] before:content-["목차"] before:text-gray-500 before:text-sm before:w-max before:leading-none before:select-none;
 }
 
 .prose #mw-content-text .toctitle {
-  display: none;
+  @apply hidden;
 }
 
 .prose #mw-content-text ul {
-  margin: 0px;
+  @apply m-0;
 }
 
 .prose #mw-content-text ul li:not(.toclevel-1) {
-  padding-left: 0.5rem;
+  @apply pl-2;
 }
 
 .prose #mw-content-text ul li span.tocnumber {
-  font-weight: 400 !important;
-}
-
-.prose #mw-content-text ul li span.tocnumber::after {
-  --tw-content: '.' !important;
-  content: var(--tw-content) !important;
+  @apply font-normal after:content-['.'] !important;
 }
 
 .prose #mw-content-text ul li.toclevel-1 {
-  padding: 0px;
+  @apply p-0;
 }
 
 .prose #mw-content-text > :not(#toc) > ul {
-  margin-top: 0.5rem !important;
-  margin-bottom: 0.5rem !important;
-  padding-left: 1.5rem !important;
+  @apply pl-6 my-2 !important;
 }
 
 .prose #mw-content-text > :not(#toc) > ul li {
-  margin-top: 0px;
-  margin-bottom: 0.125rem;
-  padding-left: 0px;
-}
-
-.prose #mw-content-text > :not(#toc) > ul li *::marker {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
-}
-
-.prose #mw-content-text > :not(#toc) > ul li::marker {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
+  @apply pl-0 mt-0 mb-0.5 marker:text-gray-400;
 }
 
 .wikitable {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  border-radius: 10px;
-  border-width: 0px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+  @apply w-max border-0 rounded-[10px] bg-gray-100;
 }
 
 .wikitable tr {
-  --tw-border-opacity: 1 !important;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity)) !important;
+  @apply border-gray-200 !important;
 }
 
 .wikitable tr td {
-  border-width: 1px !important;
-  padding-left: 0.875rem !important;
-  padding-right: 0.875rem !important;
-  padding-top: 0.625rem !important;
-  padding-bottom: 0.625rem !important;
-  line-height: 1 !important;
+  @apply border px-3.5 py-2.5 leading-none !important;
 }
 
 .wikitable tr td:not(:last-child) {
-  border-right-width: 1px !important;
-  --tw-border-opacity: 1 !important;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity)) !important;
+  @apply border-r border-gray-200 !important;
 }
 
 .wikitable tr td * {
-  line-height: 1;
+  @apply leading-none;
 }
 
 .wikitable tr:first-child td:first-child {
-  border-top-left-radius: 10px;
+  @apply rounded-tl-[10px];
 }
 
 .wikitable tr:first-child td:last-child {
-  border-top-right-radius: 10px;
+  @apply rounded-tr-[10px];
 }
 
 .wikitable tr:last-child td:first-child {
-  border-bottom-left-radius: 10px;
+  @apply rounded-bl-[10px];
 }
 
 .wikitable tr:last-child td:last-child {
-  border-bottom-right-radius: 10px;
-}
+  @apply rounded-br-[10px];
+} */
 
 /* .catlinks-allhidden {
   @apply hidden !important;

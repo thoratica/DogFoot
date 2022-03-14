@@ -154,23 +154,23 @@ table tr {
 
 table tr th,
 table tr td {
-  @apply px-2 py-2 border border-gray-200;
+  @apply px-2 py-2 border border-gray-200 !important;
 }
 
 table tr:first-child *:first-child {
-  @apply rounded-tl-[10px];
+  @apply rounded-tl-[10px] !important;
 }
 
 table tr:first-child *:last-child {
-  @apply rounded-tr-[10px];
+  @apply rounded-tr-[10px] !important;
 }
 
 table tr:last-child *:first-child {
-  @apply rounded-bl-[10px];
+  @apply rounded-bl-[10px] !important;
 }
 
 table tr:last-child *:last-child {
-  @apply rounded-br-[10px];
+  @apply rounded-br-[10px] !important;
 }
 
 /* table {
@@ -211,12 +211,13 @@ table tr:last-child td:last-child {
 
 /* =============== */
 
+/* 
 .prose p {
   @apply my-2;
 }
 
 .prose ul li {
-  /* @apply m-0 mb-[0.1rem]; */
+  @apply m-0 mb-[0.1rem];
 }
 
 .prose #mw-content-text * {
@@ -293,7 +294,7 @@ table tr:last-child td:last-child {
 
 .wikitable tr:last-child td:last-child {
   @apply rounded-br-[10px];
-}
+} */
 
 /* .catlinks-allhidden {
   @apply hidden !important;

@@ -80,12 +80,12 @@ class DogFootTemplate extends BaseTemplate
       <div class="flex">
         <section class="mx-auto px-3 xs:px-6 flex max-w-7xl w-full">
           <article class="py-6 w-full">
-            <div class="flex border-b border-gray-200 pb-2">
+            <div class="flex flex-col border-0 mb-2.5">
               <h1 class="text-gray-900 outline-none focus:filter focus:brightness-95 transition-all font-semibold text-3xl xs:text-4xl m-0 p-0 border-0">
                 <?php $this->html('title'); ?>
               </h1>
+              <?php $this->html('catlinks'); ?>
             </div>
-            <?php $this->html('catlinks'); ?>
             <section id="post">
               <?php $this->html('bodytext'); ?>
             </section>

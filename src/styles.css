@@ -196,6 +196,18 @@
 
 /* =============== */
 
+/* ===== 코드 ===== */
+
+#post pre {
+  @apply rounded-xl my-2;
+}
+
+#post code {
+  @apply rounded-md px-2.5 py-0.5;
+}
+
+/* =============== */
+
 /* table {
   @apply w-max border-0 rounded-[10px] bg-gray-100;
 }

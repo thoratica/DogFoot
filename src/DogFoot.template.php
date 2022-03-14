@@ -26,7 +26,7 @@ class DogFootTemplate extends BaseTemplate
                     ?>" class="outline-none focus:filter focus:brightness-95 transition-all">
             <img src="<?php $this->text('logopath'); ?>" class="h-6" />
           </a>
-          <div class="ml-auto">
+          <div class="ml-auto absolute right-3 xs:static">
             <?php
             if ($this->getSkin()->getUser()->isRegistered()) {
             ?>

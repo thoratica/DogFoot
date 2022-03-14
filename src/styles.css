@@ -26,6 +26,10 @@
   @apply text-[15px] leading-5 whitespace-nowrap text-blue-500 hover:text-blue-500/80 focus:text-blue-500/80 decoration-blue-400 decoration-dotted hover:underline outline-none focus:filter focus:brightness-95 transition-all !important;
 }
 
+.catlinks-allhidden {
+  @apply hidden !important;
+}
+
 .prose a.new[href],
 #catlinks a.new[href] {
   @apply text-red-500 hover:text-red-500/80 focus:text-red-500/80 decoration-red-400 !important;

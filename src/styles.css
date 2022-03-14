@@ -198,7 +198,7 @@
 
 /* ===== 코드 ===== */
 
-#content pre {
+#content pre:not(.wikiEditor-ui pre) {
   @apply rounded-xl my-2;
 }
 

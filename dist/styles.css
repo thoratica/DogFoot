@@ -1167,7 +1167,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 /* ===== 코드 ===== */
 
-#content pre {
+#content pre:not(.wikiEditor-ui pre) {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   border-radius: 0.75rem;

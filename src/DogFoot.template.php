@@ -31,7 +31,7 @@ class DogFootTemplate extends BaseTemplate
             if ($this->getSkin()->getUser()->isRegistered()) {
             ?>
               <div class="profile group">
-                <button class="px-3.5 py-2 transition-colors duration-300 ease-in-out rounded-xl outline-none bg-gray-100 focus:bg-gray-200 hover:bg-gray-200">
+                <button class="px-[13px] py-2 transition-colors duration-300 ease-in-out rounded-xl outline-none bg-gray-100 focus:bg-gray-200 hover:bg-gray-200">
                   <i class="fa-solid fa-user text-gray-500"></i>
                 </button>
                 <div class="fixed h-0">
@@ -45,12 +45,10 @@ class DogFootTemplate extends BaseTemplate
 
             <?php
             } else { ?>
-              <ul class="flex gap-x-4">
-                <?php
-                foreach ($this->getPersonalTools() as $key => $item) { ?>
-                  <?php echo $this->makeListItem($key, $item) ?>
-                <?php
-                } ?>
+              <ul class="flex gap-x-1.5">
+                <a href="/w/특수:로그인" class="px-3 py-2 transition-colors duration-300 ease-in-out rounded-xl outline-none bg-gray-100 focus:bg-gray-200 hover:bg-gray-200">
+                  <i class="fa-solid fa-right-from-bracket text-gray-500"></i>
+                </a>
               </ul>
             <?php
             }

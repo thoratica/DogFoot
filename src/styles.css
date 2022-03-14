@@ -186,8 +186,12 @@
 
 /* ===== 각주 ===== */
 
+#post .mw-references-wrap {
+  @apply my-2 !important;
+}
+
 #post .mw-references-wrap .references {
-  @apply m-0 list-decimal marker:text-gray-500 !important;
+  @apply mx-5 my-0 list-decimal marker:text-gray-500 !important;
 }
 
 /* =============== */

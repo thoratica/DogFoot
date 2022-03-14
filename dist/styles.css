@@ -1103,8 +1103,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 /* ===== 각주 ===== */
 
+#post .mw-references-wrap {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
 #post .mw-references-wrap .references {
-  margin: 0px !important;
+  margin-left: 1.25rem !important;
+  margin-right: 1.25rem !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
   list-style-type: decimal !important;
 }
 

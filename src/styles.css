@@ -47,6 +47,38 @@
   @apply bg-red-50 text-red-500 hover:text-red-500/80 focus:text-red-500/80 decoration-red-400 !important;
 }
 
+.prose #mw-content-text * {
+  @apply outline-none;
+}
+
+.prose #mw-content-text p {
+  @apply leading-5;
+}
+
+.prose #mw-content-text #toc {
+  @apply flex flex-col w-max bg-gray-100 border-2 border-gray-100 rounded-2xl px-4 py-2.5 mt-3 leading-none text-[15px] before:content-["목차"] before:text-gray-500 before:text-sm before:w-max before:leading-none before:select-none;
+}
+
+.prose #mw-content-text .toctitle {
+  @apply hidden;
+}
+
+.prose #mw-content-text ul {
+  @apply m-0;
+}
+
+.prose #mw-content-text ul li:not(.toclevel-1) {
+  @apply pl-2;
+}
+
+.prose #mw-content-text ul li.toclevel-1 {
+  @apply p-0;
+}
+
+.prose #mw-content-text table {
+  @apply text-center w-max;
+}
+
 /* .catlinks-allhidden {
   @apply hidden !important;
 }

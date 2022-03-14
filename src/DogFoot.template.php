@@ -35,7 +35,7 @@ class DogFootTemplate extends BaseTemplate
                   <i class="fa-solid fa-user text-gray-900"></i>
                 </button>
                 <div class="fixed h-0">
-                  <ul class="relative bg-gray-50 p-2 border border-gray-50 shadow-lg rounded-lg right-[calc(100%_-_42px)] opacity-0 invisible transform -translate-y-4 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:visible group-hover:translate-x-1 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-x-1 group-focus-within:translate-y-0">
+                  <ul class="relative bg-gray-50 p-1.5 border border-gray-50 shadow-lg rounded-lg right-[calc(100%_-_42px)] opacity-0 invisible transform -translate-y-4 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:visible group-hover:translate-x-1 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-x-1 group-focus-within:translate-y-0">
                     <?php foreach ($this->getPersonalTools() as $key => $item) {
                       echo $this->makeListItem($key, $item);
                     } ?>

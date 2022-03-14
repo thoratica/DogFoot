@@ -2,8 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+#pt-login a,
+#pt-createaccount a {
+  @apply font-medium text-gray-900 hover:underline decoration-dotted decoration-gray-800 !important;
+}
+
+.profile .fixed ul li.mw-list-item {
+  @apply m-0;
+}
+
+.profile .fixed ul li.mw-list-item a {
+  @apply inline-block px-3 py-2 font-medium text-[15px] text-gray-900 hover:bg-gray-100 no-underline w-full h-full rounded-md;
+}
+
 .catlinks {
-  @apply flex items-center w-full bg-gray-100 border-2 border-gray-100 rounded-2xl px-4 py-2.5 mt-3 leading-none !important;
+  @apply flex items-center w-full bg-gray-100 border-2 border-gray-100 rounded-xl px-4 py-2.5 mt-3 leading-none !important;
 }
 
 .catlinks .mw-normal-catlinks {
@@ -36,7 +49,7 @@
 }
 
 .prose a.external[href] {
-  @apply text-emerald-600 before:content-[""] before:h-[15px] before:w-[15px] before:mr-0.5 before:relative before:top-0.5 before:inline-block before:bg-emerald-600 before:bg-[url("https://wiki.tica.fun/images/5/58/Link.svg")] before:bg-85% before:bg-no-repeat before:bg-center before:rounded-[4px];
+  @apply text-emerald-600 before:content-[""] before:h-[15px] before:w-[15px] before:mr-0.5 before:relative before:top-0.5 before:inline-block before:bg-emerald-600 before:bg-[url("https://wiki.tica.fun/images/5/58/Link.svg")] before:bg-85% before:bg-no-repeat before:bg-center before:rounded-[4px] !important;
 }
 
 /* html {

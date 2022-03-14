@@ -9,6 +9,7 @@ function getTextBetweenTags($string, $tagname)
 
 class DogFootTemplate extends BaseTemplate
 {
+
   public function execute()
   {
     $this->data['content_actions']['nstab-main']['text'] = wfMessage('view')->parse();
@@ -30,11 +31,11 @@ class DogFootTemplate extends BaseTemplate
             if ($this->getSkin()->getUser()->isRegistered()) {
             ?>
               <div class="profile group">
-                <button class="px-3.5 py-2 transition-colors duration-300 rounded-md outline-none focus:bg-gray-100 hover:bg-gray-100">
+                <button class="px-3.5 py-2 transition-colors duration-300 rounded-lg outline-none focus:bg-gray-100 hover:bg-gray-100">
                   <i class="fa-solid fa-user text-gray-900"></i>
                 </button>
                 <div class="fixed h-0">
-                  <ul class="relative bg-gray-50 p-2 border border-gray-50 shadow-lg rounded-md right-[calc(100%_-_42px)] opacity-0 invisible transform -translate-y-4 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0">
+                  <ul class="relative bg-gray-50 p-2 border border-gray-50 shadow-lg rounded-lg right-[calc(100%_-_42px)] opacity-0 invisible transform -translate-y-4 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:visible group-hover:translate-x-1 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-x-1 group-focus-within:translate-y-0">
                     <?php foreach ($this->getPersonalTools() as $key => $item) {
                       echo $this->makeListItem($key, $item);
                     } ?>
@@ -85,7 +86,7 @@ class DogFootTemplate extends BaseTemplate
               </h1>
             </div>
             <?php $this->html('catlinks'); ?>
-            <section class="prose max-w-none prose-a:text-blue-500 hover:prose-a:text-blue-500/80 focus:prose-a:text-blue-500/80 prose-a:decoration-transparent hover:prose-a:decoration-blue-400 prose-a:decoration-dotted py-4 prose-headings:border-b prose-headings:pb-1.5 prose-headings:border-gray-200">
+            <section class="prose max-w-none prose-a:text-blue-500 hover:prose-a:text-blue-500/80 focus:prose-a:text-blue-500/80 prose-a:decoration-transparent hover:prose-a:decoration-blue-400 prose-a:decoration-dotted py-4 prose-headings:border-gray-200">
               <?php $this->html('bodytext'); ?>
             </section>
           </article>

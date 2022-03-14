@@ -16,30 +16,38 @@
 }
 
 .catlinks {
-  @apply flex items-center w-full bg-gray-100 border-2 border-gray-100 rounded-xl px-4 py-2.5 mt-3 leading-none !important;
+  @apply flex border-0 bg-transparent m-0 p-0 mt-1.5 !important;
 }
 
 .catlinks .mw-normal-catlinks {
-  @apply text-gray-600 text-[15px] w-max leading-none select-none mr-2.5 !important;
+  @apply text-transparent leading-[0] w-full !important;
+}
+
+.catlinks .mw-normal-catlinks > a {
+  @apply hidden;
 }
 
 .catlinks .mw-normal-catlinks ul {
-  @apply ml-1.5 !important;
+  @apply flex flex-wrap gap-y-1.5 !important;
 }
 
 .catlinks .mw-normal-catlinks ul li {
-  @apply border-none m-0 p-0 after:content-["|"] after:text-[15px] after:leading-5 after:mx-1.5 after:text-gray-300 !important;
-}
-
-.catlinks .mw-normal-catlinks ul li:last-child {
-  @apply after:content-[""] after:m-0 !important;
+  @apply border-none m-0 p-0 mr-1.5 leading-[1.6] last:mr-0 !important;
 }
 
 .catlinks .mw-normal-catlinks ul li a {
-  @apply text-[15px] leading-5 whitespace-nowrap text-blue-500 hover:text-blue-500/80 focus:text-blue-500/80 decoration-blue-400 decoration-dotted hover:underline outline-none focus:filter focus:brightness-95 transition-all !important;
+  @apply text-[15px] leading-none whitespace-nowrap decoration-dotted hover:underline outline-none focus:filter focus:brightness-95 transition-all px-3.5 py-1 rounded-full;
 }
 
-.catlinks-allhidden {
+.catlinks .mw-normal-catlinks ul li a:not(.new) {
+  @apply bg-blue-50 text-blue-500 hover:text-blue-500/80 focus:text-blue-500/80 decoration-blue-400;
+}
+
+.catlinks .mw-normal-catlinks ul li a.new {
+  @apply bg-red-50 text-red-500 hover:text-red-500/80 focus:text-red-500/80 decoration-red-400 !important;
+}
+
+/* .catlinks-allhidden {
   @apply hidden !important;
 }
 
@@ -50,7 +58,7 @@
 
 .prose a.external[href] {
   @apply text-emerald-600 before:content-[""] before:h-[15px] before:w-[15px] before:mr-0.5 before:relative before:top-0.5 before:inline-block before:bg-emerald-600 before:bg-[url("https://wiki.tica.fun/images/5/58/Link.svg")] before:bg-85% before:bg-no-repeat before:bg-center before:rounded-[4px] !important;
-}
+} */
 
 /* html {
   font-family: 'Noto Sans KR', sans-serif;

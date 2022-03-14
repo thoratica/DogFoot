@@ -56,27 +56,27 @@
 /* ===== 목차 ===== */
 
 /* 목차 블록 */
-#post #toc {
+#content #toc {
   @apply flex flex-col w-max max-w-full bg-gray-100 border-2 border-gray-100 rounded-2xl px-4 py-2.5 mt-3 leading-none text-[15px] before:content-["목차"] before:text-gray-500 before:text-sm before:w-max before:leading-none before:select-none !important;
 }
 
 /* 목차 타이틀, 숨기기/보이기 버튼 */
-#post #toc .toctitle {
+#content #toc .toctitle {
   @apply hidden;
 }
 
 /* 최상위 링크 목록 */
-#post #toc ul {
+#content #toc ul {
   @apply my-0 list-none;
 }
 
 /* 최상위 링크 목록 항목 */
-#post #toc ul li {
+#content #toc ul li {
   @apply my-2;
 }
 
 /* 최상위 아닌 링크 목록 */
-#post #toc ul li ul {
+#content #toc ul li ul {
   @apply ml-5 !important;
 }
 
@@ -85,24 +85,24 @@
 /* ===== 본문 헤딩 ===== */
 
 /* h1 */
-#post h1 {
+#content h1 {
   @apply font-semibold text-4xl border-gray-200 mb-2;
 }
 
 /* h2 */
-#post h2 {
+#content h2 {
   @apply font-semibold text-2xl border-gray-200 mb-2;
 }
 
 /* h3 */
-#post h3 {
+#content h3 {
   @apply font-semibold text-xl border-gray-200 mb-2;
 }
 
 /* h4, h5, h6 - 크기가 작으면 읽기 어려워 고정 */
-#post h4,
-#post h5,
-#post h6 {
+#content h4,
+#content h5,
+#content h6 {
   @apply font-semibold text-lg border-gray-200 mb-2;
 }
 
@@ -111,22 +111,22 @@
 /* ===== 본문 링크 ===== */
 
 /* 기본 스타일 */
-#post a {
+#content a {
   @apply decoration-dotted hover:underline focus:underline outline-none transition-colors duration-300 ease-in-out;
 }
 
 /* 존재하는 내부 문서로의 링크 */
-#post a:not(.new, .external) {
+#content a:not(.new, .external) {
   @apply text-blue-500 hover:text-blue-500/80 focus:text-blue-500/80 decoration-blue-400;
 }
 
 /* 존재하지 않는 내부 문서로의 링크 */
-#post a.new {
+#content a.new {
   @apply text-red-500 hover:text-red-500/80 focus:text-red-500/80 decoration-red-400;
 }
 
 /* 외부 페이지로의 링크 */
-#post :not(.sub-box .info) > a.external {
+#content :not(.sub-box .info) > a.external {
   @apply text-emerald-600 before:content-[""] before:h-[15px] before:w-[15px] before:mr-0.5 before:relative before:top-0.5 before:inline-block before:bg-emerald-600 before:bg-[url("https://wiki.tica.fun/images/5/58/Link.svg")] before:bg-85% before:bg-no-repeat before:bg-center before:rounded-[4px] !important;
 }
 
@@ -134,7 +134,7 @@
 
 /* == 본문 리스트 == */
 
-#post ul {
+#content ul {
   @apply list-disc;
 }
 
@@ -142,43 +142,43 @@
 
 /* ==== 테이블 ==== */
 
-#post table {
+#content table {
   @apply bg-gray-100 font-medium border-0 rounded-[10px] border-separate [border-spacing:_0] !important;
 }
 
-#post table thead,
-#post table tbody,
-#post table tr {
+#content table thead,
+#content table tbody,
+#content table tr {
   @apply border-0 !important;
 }
 
-#post table tr th,
-#post table tr td {
+#content table tr th,
+#content table tr td {
   @apply px-4 py-1.5 border-0 border-r border-b border-gray-200 !important;
 }
 
-#post table tr th:first-child,
-#post table tr td:first-child {
+#content table tr th:first-child,
+#content table tr td:first-child {
   @apply border-l !important;
 }
 
-#post table tr th {
+#content table tr th {
   @apply border-t !important;
 }
 
-#post table tr:first-child *:first-child {
+#content table tr:first-child *:first-child {
   @apply rounded-tl-[10px] !important;
 }
 
-#post table tr:first-child *:last-child {
+#content table tr:first-child *:last-child {
   @apply rounded-tr-[10px] !important;
 }
 
-#post table tr:last-child *:first-child {
+#content table tr:last-child *:first-child {
   @apply rounded-bl-[10px] !important;
 }
 
-#post table tr:last-child *:last-child {
+#content table tr:last-child *:last-child {
   @apply rounded-br-[10px] !important;
 }
 
@@ -186,11 +186,11 @@
 
 /* ===== 각주 ===== */
 
-#post .mw-references-wrap {
+#content .mw-references-wrap {
   @apply my-2 !important;
 }
 
-#post .mw-references-wrap .references {
+#content .mw-references-wrap .references {
   @apply mx-5 my-0 list-decimal marker:text-gray-500 !important;
 }
 
@@ -198,11 +198,11 @@
 
 /* ===== 코드 ===== */
 
-#post pre {
+#content pre {
   @apply rounded-xl my-2;
 }
 
-#post code {
+#content code {
   @apply rounded-md px-2.5 py-0.5;
 }
 

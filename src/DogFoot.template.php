@@ -87,7 +87,7 @@ class DogFootTemplate extends BaseTemplate
                   <?php
                   if ($this->getSkin()->getUser()->isRegistered()) {
                   ?>
-                    <a href="<?php echo $this->data['content_actions']['ve-edit']['href'] ?? '#' ?>" class="bg-gray-100 hover:bg-gray-200 outline-none transition-colors duration-300 ease-in-out rounded-xl px-[11px] py-2" title="시각 편집 모드">
+                    <a id="ca-edit" href="<?php echo $this->data['content_actions']['ve-edit']['href'] ?? '#' ?>" class="bg-gray-100 hover:bg-gray-200 outline-none transition-colors duration-300 ease-in-out rounded-xl px-[11px] py-2" title="시각 편집 모드">
                       <i class="fa-solid fa-eye text-gray-500"></i>
                     </a>
                     <a href="<?php echo $this->data['content_actions']['edit']['href'] ?? '#' ?>" class="bg-gray-100 hover:bg-gray-200 outline-none transition-colors duration-300 ease-in-out rounded-xl px-3 py-2" title="원본 편집 모드">
@@ -127,8 +127,10 @@ class DogFootTemplate extends BaseTemplate
               </div>
               <?php $this->html('catlinks'); ?>
             </div>
-            <section id="post">
-              <?php $this->html('bodytext'); ?>
+            <section id="content">
+              <div id="mw-content-text">
+                <?php $this->html('bodytext'); ?>
+              </div>
             </section>
           </article>
         </section>

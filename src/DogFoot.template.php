@@ -69,6 +69,7 @@ class DogFootTemplate extends BaseTemplate
                 <?php $this->html("title"); ?>
               </h1>
               <div class="df-header-buttons">
+                <?php echo json_encode($this->data["content_actions"]) ?>
                 <?php
                 if ($this->getSkin()->getUser()->isRegistered()) {
                 ?>

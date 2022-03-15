@@ -104,15 +104,15 @@ body {
   right: calc(100% - 42px);
   opacity: 0;
   visibility: hidden;
-  transform: translateX(0) translateY(-1rem);
+  transform: translate(0, -1rem);
   transition: transform 300ms ease-in-out, opacity 300ms ease-in-out, visibility 300ms ease-in-out;
 }
 
 .df-logon-menu:hover .df-logon-menu-popup-inner,
 .df-logon-menu:focus-within .df-logon-menu-popup-inner {
-  opacity: 100%;
+  opacity: 1;
   visibility: visible;
-  transform: translateX(0.25rem) translateY(0);
+  transform: translate(0.25rem, 0);
 }
 
 .df-logon-menu-popup-item {

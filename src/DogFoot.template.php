@@ -31,7 +31,7 @@ class DogFootTemplate extends BaseTemplate
             if ($this->getSkin()->getUser()->isRegistered()) {
             ?>
               <div class="df-button-wrapper">
-                <a title="파일 업로드" class="df-upload-button">
+                <a href="/w/특수:올리기" title="파일 업로드" class="df-upload-button">
                   <i class="fas fa-cloud-upload-alt text-neutral-600"></i>
                 </a>
                 <div class="df-logon-menu">
@@ -61,66 +61,64 @@ class DogFootTemplate extends BaseTemplate
         </div>
       </nav>
 
-      <div class="flex">
-        <section class="mx-auto px-3 xs:px-6 flex max-w-7xl w-full">
-          <article class="py-6 w-full">
-            <div class="flex flex-col border-0 mb-2.5">
-              <div class="flex items-center">
-                <h1 class="text-gray-900 outline-none focus:filter focus:brightness-95 transition-all font-semibold text-3xl xs:text-4xl m-0 p-0 border-0">
-                  <?php $this->html('title'); ?>
-                </h1>
-                <div class="ml-auto flex gap-x-1.5">
-                  <?php
-                  if ($this->getSkin()->getUser()->isRegistered()) {
-                  ?>
-                    <a id="ca-edit" href="<?php echo $this->data['content_actions']['ve-edit']['href'] ?? '#' ?>" class="bg-gray-100 hover:bg-gray-200 outline-none transition-colors duration-300 ease-in-out rounded-xl px-[11px] py-2" title="시각 편집 모드">
-                      <i class="fa-solid fa-eye text-gray-500"></i>
-                    </a>
-                    <a href="<?php echo $this->data['content_actions']['edit']['href'] ?? '#' ?>" class="bg-gray-100 hover:bg-gray-200 outline-none transition-colors duration-300 ease-in-out rounded-xl px-3 py-2" title="원본 편집 모드">
-                      <i class="fa-solid fa-pen text-gray-500"></i>
-                    </a>
+      <section class="df-main">
+        <article class="df-article">
+          <div class="df-header">
+            <div class="df-header-info">
+              <h1 class="df-header-info-title">
+                <?php $this->html('title'); ?>
+              </h1>
+              <div class="df-header-buttons">
+                <?php
+                if ($this->getSkin()->getUser()->isRegistered()) {
+                ?>
+                  <a id="ca-edit" href="<?php echo $this->data['content_actions']['ve-edit']['href'] ?? '#' ?>" class="df-header-button df-header-button-veditor" title="시각 편집 모드">
+                    <i class="fa-solid fa-eye"></i>
+                  </a>
+                  <a href="<?php echo $this->data['content_actions']['edit']['href'] ?? '#' ?>" class="df-header-button df-header-button-editor" title="원본 편집 모드">
+                    <i class="fa-solid fa-pen"></i>
+                  </a>
 
-                    <div class="profile group">
-                      <button class="bg-gray-100 hover:bg-gray-200 outline-none transition-colors duration-300 ease-in-out rounded-xl px-[15px] py-2" title="더보기">
-                        <i class="fa-solid fa-caret-down text-gray-500"></i>
-                      </button>
-                      <div class="fixed h-0">
-                        <div class="flex relative bg-gray-50 p-1.5 border border-gray-50 shadow-lg rounded-lg right-[calc(100%_-_42px)] opacity-0 invisible transform -translate-y-4 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:visible group-hover:translate-x-1 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-x-1 group-focus-within:translate-y-0">
-                          <a href="<?php echo $this->data['content_actions']['history']['href'] ?? '#' ?>" class="text-gray-900 hover:bg-gray-100 outline-none transition-colors duration-300 ease-in-out rounded-xl px-3 py-2" title="역사">
-                            <i class="fa-solid fa-clock-rotate-left text-gray-500"></i>
-                          </a>
-                          <a href="<?php echo $this->data['content_actions']['move']['href'] ?? '#' ?>" class="hover:bg-gray-100 outline-none transition-colors duration-300 ease-in-out rounded-xl px-3 py-2" title="이동">
-                            <i class="fa-solid fa-angles-right text-gray-500"></i>
-                          </a>
-                          <a href="<?php echo $this->data['content_actions']['delete']['href'] ?? '#' ?>" class="hover:bg-gray-100 outline-none transition-colors duration-300 ease-in-out rounded-xl px-3 py-2" title="삭제">
-                            <i class="fa-solid fa-trash text-gray-500"></i>
-                          </a>
-                          <a href="<?php echo $this->data['content_actions']['protect']['href'] ?? '#' ?>" class="hover:bg-gray-100 outline-none transition-colors duration-300 ease-in-out rounded-xl px-3 py-2" title="보호">
-                            <i class="fa-solid fa-lock text-gray-500"></i>
-                          </a>
-                        </div>
+                  <div class="df-header-more-menu">
+                    <button class="df-header-button df-header-button-more" title="더보기">
+                      <i class="fa-solid fa-caret-down"></i>
+                    </button>
+                    <div class="df-header-buttons-more-wrapper">
+                      <div class="df-header-buttons-more">
+                        <a href="<?php echo $this->data['content_actions']['history']['href'] ?? '#' ?>" class="df-header-more-button df-header-more-button-history" title="역사">
+                          <i class="fa-solid fa-clock-rotate-left"></i>
+                        </a>
+                        <a href="<?php echo $this->data['content_actions']['move']['href'] ?? '#' ?>" class="df-header-more-button df-header-more-button-move" title="이동">
+                          <i class="fa-solid fa-angles-right"></i>
+                        </a>
+                        <a href="<?php echo $this->data['content_actions']['delete']['href'] ?? '#' ?>" class="df-header-more-button df-header-more-button-delete" title="삭제">
+                          <i class="fa-solid fa-trash"></i>
+                        </a>
+                        <a href="<?php echo $this->data['content_actions']['protect']['href'] ?? '#' ?>" class="df-header-more-button df-header-more-button-protect" title="보호">
+                          <i class="fa-solid fa-lock"></i>
+                        </a>
                       </div>
                     </div>
-                  <?php
-                  } else { ?>
-                    <a href="<?php echo $this->data['content_actions']['history']['href'] ?? '#' ?>" class="bg-gray-100 hover:bg-gray-200 outline-none transition-colors duration-300 ease-in-out rounded-xl px-3 py-2" title="역사">
-                      <i class="fa-solid fa-clock-rotate-left text-gray-500"></i>
-                    </a>
-                  <?php
-                  }
-                  ?>
-                </div>
+                  </div>
+                <?php
+                } else { ?>
+                  <a href="<?php echo $this->data['content_actions']['history']['href'] ?? '#' ?>" class="df-header-button df-header-button-history" title="역사">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                  </a>
+                <?php
+                }
+                ?>
               </div>
-              <?php $this->html('catlinks'); ?>
             </div>
-            <section id="content">
-              <div id="mw-content-text">
-                <?php $this->html('bodytext'); ?>
-              </div>
-            </section>
-          </article>
-        </section>
-      </div>
+            <?php $this->html('catlinks'); ?>
+          </div>
+          <section id="content">
+            <div id="mw-content-text">
+              <?php $this->html('bodytext'); ?>
+            </div>
+          </section>
+        </article>
+      </section>
     </div>
 
     </html>

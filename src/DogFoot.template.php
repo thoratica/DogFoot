@@ -12,8 +12,8 @@ class DogFootTemplate extends BaseTemplate
 
   public function execute()
   {
-    $this->data['content_actions']['nstab-main']['text'] = wfMessage('view')->parse();
-    $this->html('headelement');
+    $this->data["content_actions"]["nstab-main"]["text"] = wfMessage("view")->parse();
+    $this->html("headelement");
 ?>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,9 +22,9 @@ class DogFootTemplate extends BaseTemplate
       <nav class="df-nav">
         <div class="df-nav-inner">
           <a href="<?php
-                    echo htmlspecialchars($this->data['nav_urls']['mainpage']['href']);
+                    echo htmlspecialchars($this->data["nav_urls"]["mainpage"]["href"]);
                     ?>" class="df-logo-anchor">
-            <img src="<?php $this->text('logopath'); ?>" />
+            <img src="<?php $this->text("logopath"); ?>" />
           </a>
           <div class="df-nav-menu">
             <?php
@@ -42,7 +42,7 @@ class DogFootTemplate extends BaseTemplate
                     <div class="df-logon-menu-popup-inner">
                       <?php foreach ($this->getPersonalTools() as $key => $item) {
                       ?>
-                        <a id="<?php echo $item['id'] ?>" href="<?php echo $item['links'][0]['href'] ?>" title="<?php echo $item['links'][0]['text'] ?>" class="df-logon-menu-popup-item"><?php echo $item['links'][0]['text'] ?></a>
+                        <a id="<?php echo $item["id"] ?>" href="<?php echo $item["links"][0]["href"] ?>" title="<?php echo $item["links"][0]["text"] ?>" class="df-logon-menu-popup-item"><?php echo $item["links"][0]["text"] ?></a>
                       <?php
                       } ?>
                     </div>
@@ -51,7 +51,7 @@ class DogFootTemplate extends BaseTemplate
               </div>
             <?php
             } else { ?>
-              <a id="<?php echo $this->getPersonalTools()['login']['id'] ?>" href="<?php echo $this->getPersonalTools()['login']['links'][0]['href'] ?>" title="<?php echo $this->getPersonalTools()['login']['links'][0]['text'] ?>" class="df-login-button">
+              <a id="<?php echo $this->getPersonalTools()["login"]["id"] ?>" href="<?php echo $this->getPersonalTools()["login"]["links"][0]["href"] ?>" title="<?php echo $this->getPersonalTools()["login"]["links"][0]["text"] ?>" class="df-login-button">
                 <i class="fa-solid fa-right-from-bracket"></i>
               </a>
             <?php
@@ -66,16 +66,16 @@ class DogFootTemplate extends BaseTemplate
           <div class="df-header">
             <div class="df-header-info">
               <h1 class="df-header-info-title">
-                <?php $this->html('title'); ?>
+                <?php $this->html("title"); ?>
               </h1>
               <div class="df-header-buttons">
                 <?php
                 if ($this->getSkin()->getUser()->isRegistered()) {
                 ?>
-                  <a id="ca-edit" href="<?php echo $this->data['content_actions']['ve-edit']['href'] ?? '#' ?>" class="df-header-button df-header-button-veditor" title="시각 편집 모드">
+                  <a id="ca-edit" href="<?php echo $this->data["content_actions"]["ve-edit"]["href"] ?? "#" ?>" class="df-header-button df-header-button-veditor" title="시각 편집 모드">
                     <i class="fa-solid fa-eye"></i>
                   </a>
-                  <a href="<?php echo $this->data['content_actions']['edit']['href'] ?? '#' ?>" class="df-header-button df-header-button-editor" title="원본 편집 모드">
+                  <a href="<?php echo $this->data["content_actions"]["edit"]["href"] ?? "#" ?>" class="df-header-button df-header-button-editor" title="원본 편집 모드">
                     <i class="fa-solid fa-pen"></i>
                   </a>
 
@@ -85,16 +85,16 @@ class DogFootTemplate extends BaseTemplate
                     </button>
                     <div class="df-header-buttons-more-wrapper">
                       <div class="df-header-buttons-more">
-                        <a href="<?php echo $this->data['content_actions']['history']['href'] ?? '#' ?>" class="df-header-more-button df-header-more-button-history" title="역사">
+                        <a href="<?php echo $this->data["content_actions"]["history"]["href"] ?? "#" ?>" class="df-header-more-button df-header-more-button-history" title="역사">
                           <i class="fa-solid fa-clock-rotate-left"></i>
                         </a>
-                        <a href="<?php echo $this->data['content_actions']['move']['href'] ?? '#' ?>" class="df-header-more-button df-header-more-button-move" title="이동">
+                        <a href="<?php echo $this->data["content_actions"]["move"]["href"] ?? "#" ?>" class="df-header-more-button df-header-more-button-move" title="이동">
                           <i class="fa-solid fa-angles-right"></i>
                         </a>
-                        <a href="<?php echo $this->data['content_actions']['delete']['href'] ?? '#' ?>" class="df-header-more-button df-header-more-button-delete" title="삭제">
+                        <a href="<?php echo $this->data["content_actions"]["delete"]["href"] ?? "#" ?>" class="df-header-more-button df-header-more-button-delete" title="삭제">
                           <i class="fa-solid fa-trash"></i>
                         </a>
-                        <a href="<?php echo $this->data['content_actions']['protect']['href'] ?? '#' ?>" class="df-header-more-button df-header-more-button-protect" title="보호">
+                        <a href="<?php echo $this->data["content_actions"]["protect"]["href"] ?? "#" ?>" class="df-header-more-button df-header-more-button-protect" title="보호">
                           <i class="fa-solid fa-lock"></i>
                         </a>
                       </div>
@@ -102,7 +102,7 @@ class DogFootTemplate extends BaseTemplate
                   </div>
                 <?php
                 } else { ?>
-                  <a href="<?php echo $this->data['content_actions']['history']['href'] ?? '#' ?>" class="df-header-button df-header-button-history" title="역사">
+                  <a href="<?php echo $this->data["content_actions"]["history"]["href"] ?? "#" ?>" class="df-header-button df-header-button-history" title="역사">
                     <i class="fa-solid fa-clock-rotate-left"></i>
                   </a>
                 <?php
@@ -110,11 +110,36 @@ class DogFootTemplate extends BaseTemplate
                 ?>
               </div>
             </div>
-            <?php $this->html('catlinks'); ?>
+            <div class="df-header-categories">
+              <?php
+              $html = $this->data["skin"]->getCategoryLinks();
+
+              if ($html !== "") {
+                $tmplist1 = explode("<li><a href=\"", explode("</ul>", explode("<ul>", $html)[1])[0]);
+
+                array_shift($tmplist1);
+
+                foreach ($tmplist1 as $tmp1) {
+                  $tmplist2 = explode("\" title=\"", $tmp1);
+                  $tmplist3 = explode("\">", $tmplist2[1]);
+                  $tmplist4 = explode("\" class=\"", $tmplist2[0]);
+                  $tmplist5 = explode("</a></li>", $tmplist3[1]);
+
+                  $href = $tmplist4[0];
+                  $title = $tmplist3[0];
+                  $exists = sizeof($tmplist4) >= 2 && $tmplist4[1] === "new";
+                  $text = $tmplist5[0];
+              ?>
+                  <a href="<?php echo $href ?>" class="df-header-category<?php echo $exists ? " df-header-category-new" : "" ?>" title="<?php echo $title ?>"><?php echo $text ?></a>
+              <?php
+                }
+              }
+              ?>
+            </div>
           </div>
           <section id="content">
             <div id="mw-content-text">
-              <?php $this->html('bodytext'); ?>
+              <?php $this->html("bodytext"); ?>
             </div>
           </section>
         </article>

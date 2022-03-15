@@ -18,45 +18,59 @@ class DogFootTemplate extends BaseTemplate
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div class="df-screen">
-      <nav class="df-nav">
-        <div class="df-nav-inner">
+    <div class="min-h-screen w-full">
+      <nav class="sticky flex items-center h-16">
+        <div class="mx-auto px-3 xs:px-6 flex items-center max-w-7xl w-max xs:w-full">
           <a href="<?php
                     echo htmlspecialchars($this->data['nav_urls']['mainpage']['href']);
-                    ?>" class="df-logo-anchor">
-            <img src="<?php $this->text('logopath'); ?>" />
+                    ?>" class="outline-none focus:filter focus:brightness-95 transition-all">
+            <img src="<?php $this->text('logopath'); ?>" class="h-6" />
           </a>
-          <div class="df-nav-menu">
+          <div class="ml-auto absolute right-3 xs:static">
             <?php
             if ($this->getSkin()->getUser()->isRegistered()) {
             ?>
-              <div class="df-button-wrapper">
-                <a title="파일 업로드" class="df-upload-button">
-                  <i class="fas fa-cloud-upload-alt text-neutral-600"></i>
-                </a>
-                <div class="df-logon-menu">
-                  <button class="df-logon-menu-button">
-                    <i class="fa-solid fa-user"></i>
-                  </button>
-                  <div class="df-logon-menu-popup">
-                    <div class="df-logon-menu-popup-inner">
-                      <?php foreach ($this->getPersonalTools() as $key => $item) {
-                      ?>
-                        <a id="<?php echo $item['id'] ?>" href="<?php echo $item['links'][0]['href'] ?>" title="<?php echo $item['links'][0]['text'] ?>" class="df-logon-menu-popup-item"><?php echo $item['links'][0]['text'] ?></a>
-                      <?php
-                      } ?>
-                    </div>
-                  </div>
+              <div class="profile group">
+                <button class="px-[13px] py-2 transition-colors duration-300 ease-in-out rounded-xl outline-none bg-gray-100 focus:bg-gray-200 hover:bg-gray-200">
+                  <i class="fa-solid fa-user text-gray-500"></i>
+                </button>
+                <div class="fixed h-0">
+                  <ul class="relative bg-gray-50 p-1.5 border border-gray-50 shadow-lg rounded-lg right-[calc(100%_-_42px)] opacity-0 invisible transform -translate-y-4 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:visible group-hover:translate-x-1 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-x-1 group-focus-within:translate-y-0">
+                    <?php foreach ($this->getPersonalTools() as $key => $item) {
+                      echo $this->makeListItem($key, $item);
+                    } ?>
+                  </ul>
                 </div>
               </div>
+
             <?php
             } else { ?>
-              <a id="<?php echo $this->getPersonalTools()['login']['id'] ?>" href="<?php echo $this->getPersonalTools()['login']['links'][0]['href'] ?>" title="<?php echo $this->getPersonalTools()['login']['links'][0]['text'] ?>" class="df-login-button">
-                <i class="fa-solid fa-right-from-bracket"></i>
-              </a>
+              <ul class="flex gap-x-1.5">
+                <a href="/w/특수:로그인" class="px-3 py-2 transition-colors duration-300 ease-in-out rounded-xl outline-none bg-gray-100 focus:bg-gray-200 hover:bg-gray-200">
+                  <i class="fa-solid fa-right-from-bracket text-gray-500"></i>
+                </a>
+              </ul>
             <?php
             }
             ?>
+            <!-- <?php
+                  if ($this->getSkin()->getUser()->isRegistered()) { ?>
+              <a title="파일 업로드" class="border-b " href="https://wiki.pmh.codes/wiki/특수:업로드">
+                <i class="fas fa-cloud-upload-alt text-neutral-600"></i>
+              </a>
+              <a title="환경설정" class="border-b " href="https://wiki.pmh.codes/wiki/특수:환경설정">
+                <i class="fas fa-cogs text-neutral-600"></i>
+              </a>
+              <a title="로그아웃" class="" href="https://wiki.pmh.codes/wiki/특수:로그아웃">
+                <i class="fas fa-sign-out-alt text-neutral-600"></i>
+                로그아웃
+              </a>
+            <?php } else { ?>
+              <a title="로그인" class="" href="https://wiki.pmh.codes/wiki/특수:로그인">
+                <i class="fas fa-sign-in-alt text-neutral-600"></i>
+                로그인
+              </a>
+            <?php } ?> -->
           </div>
         </div>
       </nav>

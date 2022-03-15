@@ -16,7 +16,7 @@
   "ResourceModules": {
     "skins.dogfoot": {
       "styles": {
-        "dist/styles.css": {
+        "src/styles.css": {
           "media": "all"
         },
         "fonts/pretendardvariable.css": {

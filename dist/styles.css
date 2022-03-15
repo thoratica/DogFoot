@@ -1,1505 +1,194 @@
-/*
-! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com
-*/
+:root {
+  --color-white: #ffffff;
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+}
 
-/*
-1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
-2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
-*/
-
-*,
-::before,
-::after {
+* {
   box-sizing: border-box;
-  /* 1 */
-  border-width: 0;
-  /* 2 */
-  border-style: solid;
-  /* 2 */
-  border-color: #e5e7eb;
-  /* 2 */
+  font-family: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
+    'Noto Sans KR', 'Malgun Gothic', sans-serif;
 }
-
-::before,
-::after {
-  --tw-content: '';
-}
-
-/*
-1. Use a consistent sensible line-height in all browsers.
-2. Prevent adjustments of font size after orientation changes in iOS.
-3. Use a more readable tab size.
-4. Use the user's configured `sans` font-family by default.
-*/
-
-html {
-  line-height: 1.5;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-  -moz-tab-size: 4;
-  /* 3 */
-  -o-tab-size: 4;
-     tab-size: 4;
-  /* 3 */
-  font-family: "Pretendard Variable", sans-serif;
-  /* 4 */
-}
-
-/*
-1. Remove the margin in all browsers.
-2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
-*/
 
 body {
   margin: 0;
-  /* 1 */
-  line-height: inherit;
-  /* 2 */
-}
-
-/*
-1. Add the correct height in Firefox.
-2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
-3. Ensure horizontal rules are visible by default.
-*/
-
-hr {
-  height: 0;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  border-top-width: 1px;
-  /* 3 */
-}
-
-/*
-Add the correct text decoration in Chrome, Edge, and Safari.
-*/
-
-abbr:where([title]) {
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-}
-
-/*
-Remove the default font size and weight for headings.
-*/
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-/*
-Reset links to optimize for opt-in styling instead of opt-out.
-*/
-
-a {
-  color: inherit;
-  text-decoration: inherit;
-}
-
-/*
-Add the correct font weight in Edge and Safari.
-*/
-
-b,
-strong {
-  font-weight: bolder;
-}
-
-/*
-1. Use the user's configured `mono` font family by default.
-2. Correct the odd `em` font sizing in all browsers.
-*/
-
-code,
-kbd,
-samp,
-pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
-}
-
-/*
-Add the correct font size in all browsers.
-*/
-
-small {
-  font-size: 80%;
-}
-
-/*
-Prevent `sub` and `sup` elements from affecting the line height in all browsers.
-*/
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-/*
-1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
-2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
-3. Remove gaps between table borders by default.
-*/
-
-table {
-  text-indent: 0;
-  /* 1 */
-  border-color: inherit;
-  /* 2 */
-  border-collapse: collapse;
-  /* 3 */
-}
-
-/*
-1. Change the font styles in all browsers.
-2. Remove the margin in Firefox and Safari.
-3. Remove default padding in all browsers.
-*/
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: inherit;
-  /* 1 */
-  color: inherit;
-  /* 1 */
-  margin: 0;
-  /* 2 */
   padding: 0;
-  /* 3 */
+  line-height: 1.5rem;
 }
 
-/*
-Remove the inheritance of text transform in Edge and Firefox.
-*/
-
-button,
-select {
-  text-transform: none;
-}
-
-/*
-1. Correct the inability to style clickable types in iOS and Safari.
-2. Remove default button styles.
-*/
-
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
-  -webkit-appearance: button;
-  /* 1 */
-  background-color: transparent;
-  /* 2 */
-  background-image: none;
-  /* 2 */
-}
-
-/*
-Use the modern Firefox focus style for all focusable elements.
-*/
-
-:-moz-focusring {
-  outline: auto;
-}
-
-/*
-Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
-*/
-
-:-moz-ui-invalid {
-  box-shadow: none;
-}
-
-/*
-Add the correct vertical alignment in Chrome and Firefox.
-*/
-
-progress {
-  vertical-align: baseline;
-}
-
-/*
-Correct the cursor style of increment and decrement buttons in Safari.
-*/
-
-::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/*
-1. Correct the odd appearance in Chrome and Safari.
-2. Correct the outline style in Safari.
-*/
-
-[type='search'] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
-}
-
-/*
-Remove the inner padding in Chrome and Safari on macOS.
-*/
-
-::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/*
-1. Correct the inability to style clickable types in iOS and Safari.
-2. Change font properties to `inherit` in Safari.
-*/
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
-}
-
-/*
-Add the correct display in Chrome and Safari.
-*/
-
-summary {
-  display: list-item;
-}
-
-/*
-Removes the default spacing and border for appropriate elements.
-*/
-
-blockquote,
-dl,
-dd,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-figure,
-p,
-pre {
-  margin: 0;
-}
-
-fieldset {
-  margin: 0;
-  padding: 0;
-}
-
-legend {
-  padding: 0;
-}
-
-ol,
-ul,
-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/*
-Prevent resizing textareas horizontally by default.
-*/
-
-textarea {
-  resize: vertical;
-}
-
-/*
-1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
-2. Set the default placeholder color to the user's configured gray 400 color.
-*/
-
-input::-moz-placeholder, textarea::-moz-placeholder {
-  opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
-}
-
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
-}
-
-input::placeholder,
-textarea::placeholder {
-  opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
-}
-
-/*
-Set the default cursor for buttons.
-*/
-
-button,
-[role="button"] {
-  cursor: pointer;
-}
-
-/*
-Make sure disabled buttons don't get the pointer cursor.
-*/
-
-:disabled {
-  cursor: default;
-}
-
-/*
-1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
-2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
-   This can trigger a poorly considered lint error in some tools but is included by design.
-*/
-
-img,
-svg,
-video,
-canvas,
-audio,
-iframe,
-embed,
-object {
-  display: block;
-  /* 1 */
-  vertical-align: middle;
-  /* 2 */
-}
-
-/*
-Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
-*/
-
-img,
-video {
-  max-width: 100%;
-  height: auto;
-}
-
-/*
-Ensure the default browser behavior of the `hidden` attribute.
-*/
-
-[hidden] {
-  display: none;
-}
-
-*, ::before, ::after {
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  --tw-pan-x:  ;
-  --tw-pan-y:  ;
-  --tw-pinch-zoom:  ;
-  --tw-scroll-snap-strictness: proximity;
-  --tw-ordinal:  ;
-  --tw-slashed-zero:  ;
-  --tw-numeric-figure:  ;
-  --tw-numeric-spacing:  ;
-  --tw-numeric-fraction:  ;
-  --tw-ring-inset:  ;
-  --tw-ring-offset-width: 0px;
-  --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
-  --tw-ring-offset-shadow: 0 0 #0000;
-  --tw-ring-shadow: 0 0 #0000;
-  --tw-shadow: 0 0 #0000;
-  --tw-shadow-colored: 0 0 #0000;
-  --tw-blur:  ;
-  --tw-brightness:  ;
-  --tw-contrast:  ;
-  --tw-grayscale:  ;
-  --tw-hue-rotate:  ;
-  --tw-invert:  ;
-  --tw-saturate:  ;
-  --tw-sepia:  ;
-  --tw-drop-shadow:  ;
-  --tw-backdrop-blur:  ;
-  --tw-backdrop-brightness:  ;
-  --tw-backdrop-contrast:  ;
-  --tw-backdrop-grayscale:  ;
-  --tw-backdrop-hue-rotate:  ;
-  --tw-backdrop-invert:  ;
-  --tw-backdrop-opacity:  ;
-  --tw-backdrop-saturate:  ;
-  --tw-backdrop-sepia:  ;
-}
-
-.invisible {
-  visibility: hidden !important;
-}
-
-.fixed {
-  position: fixed !important;
-}
-
-.absolute {
-  position: absolute !important;
-}
-
-.relative {
-  position: relative !important;
-}
-
-.sticky {
-  position: -webkit-sticky !important;
-  position: sticky !important;
-}
-
-.right-3 {
-  right: 0.75rem !important;
-}
-
-.right-\[calc\(100\%_-_42px\)\] {
-  right: calc(100% - 42px) !important;
-}
-
-.m-0 {
-  margin: 0px !important;
-}
-
-.mx-auto {
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-.ml-auto {
-  margin-left: auto !important;
-}
-
-.mb-2\.5 {
-  margin-bottom: 0.625rem !important;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem !important;
-}
-
-.flex {
-  display: flex !important;
-}
-
-.h-16 {
-  height: 4rem !important;
-}
-
-.h-6 {
-  height: 1.5rem !important;
-}
-
-.h-0 {
-  height: 0px !important;
-}
-
-.min-h-screen {
-  min-height: 100vh !important;
-}
-
-.w-full {
-  width: 100% !important;
-}
-
-.w-max {
-  width: -webkit-max-content !important;
-  width: -moz-max-content !important;
-  width: max-content !important;
-}
-
-.max-w-7xl {
-  max-width: 80rem !important;
-}
-
-.-translate-y-4 {
-  --tw-translate-y: -1rem !important;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
-}
-
-.transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
-}
-
-.flex-col {
-  flex-direction: column !important;
-}
-
-.items-center {
-  align-items: center !important;
-}
-
-.gap-x-1\.5 {
-  -moz-column-gap: 0.375rem !important;
-       column-gap: 0.375rem !important;
-}
-
-.gap-x-1 {
-  -moz-column-gap: 0.25rem !important;
-       column-gap: 0.25rem !important;
-}
-
-.rounded-xl {
-  border-radius: 0.75rem !important;
-}
-
-.rounded-lg {
-  border-radius: 0.5rem !important;
-}
-
-.border {
-  border-width: 1px !important;
-}
-
-.border-0 {
-  border-width: 0px !important;
-}
-
-.border-b {
-  border-bottom-width: 1px !important;
-}
-
-.border-gray-50 {
-  --tw-border-opacity: 1 !important;
-  border-color: rgb(249 250 251 / var(--tw-border-opacity)) !important;
-}
-
-.bg-gray-100 {
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity)) !important;
-}
-
-.bg-gray-50 {
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity)) !important;
-}
-
-.bg-gray-900 {
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity)) !important;
-}
-
-.p-1\.5 {
-  padding: 0.375rem !important;
-}
-
-.p-1 {
-  padding: 0.25rem !important;
-}
-
-.p-0 {
-  padding: 0px !important;
-}
-
-.px-3 {
-  padding-left: 0.75rem !important;
-  padding-right: 0.75rem !important;
-}
-
-.px-\[13px\] {
-  padding-left: 13px !important;
-  padding-right: 13px !important;
-}
-
-.py-2 {
-  padding-top: 0.5rem !important;
-  padding-bottom: 0.5rem !important;
-}
-
-.py-6 {
-  padding-top: 1.5rem !important;
-  padding-bottom: 1.5rem !important;
-}
-
-.px-\[11px\] {
-  padding-left: 11px !important;
-  padding-right: 11px !important;
-}
-
-.px-\[15px\] {
-  padding-left: 15px !important;
-  padding-right: 15px !important;
-}
-
-.text-3xl {
-  font-size: 1.875rem !important;
-  line-height: 2.25rem !important;
-}
-
-.font-semibold {
-  font-weight: 600 !important;
-}
-
-.text-gray-500 {
-  --tw-text-opacity: 1 !important;
-  color: rgb(107 114 128 / var(--tw-text-opacity)) !important;
-}
-
-.text-neutral-600 {
-  --tw-text-opacity: 1 !important;
-  color: rgb(82 82 82 / var(--tw-text-opacity)) !important;
-}
-
-.text-gray-900 {
-  --tw-text-opacity: 1 !important;
-  color: rgb(17 24 39 / var(--tw-text-opacity)) !important;
-}
-
-.opacity-0 {
-  opacity: 0 !important;
-}
-
-.shadow-lg {
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) !important;
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color) !important;
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
-}
-
-.outline-none {
-  outline: 2px solid transparent !important;
-  outline-offset: 2px !important;
-}
-
-.transition-all {
-  transition-property: all !important;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
-  transition-duration: 150ms !important;
-}
-
-.transition-colors {
-  transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color !important;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke !important;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color !important;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
-  transition-duration: 150ms !important;
-}
-
-.duration-300 {
-  transition-duration: 300ms !important;
-}
-
-.ease-in-out {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
-}
-
-/* 로그인, 계정 만들기 버튼 */
-
-#pt-login a, #pt-createaccount a {
-  font-weight: 500 !important;
-  --tw-text-opacity: 1 !important;
-  color: rgb(17 24 39 / var(--tw-text-opacity)) !important;
-  -webkit-text-decoration-color: #1f2937 !important;
-          text-decoration-color: #1f2937 !important;
-  -webkit-text-decoration-style: dotted !important;
-          text-decoration-style: dotted !important;
-}
-
-#pt-login a:hover, #pt-createaccount a:hover {
-  -webkit-text-decoration-line: underline !important;
-          text-decoration-line: underline !important;
-}
-
-/* 프로필 호버 메뉴 */
-
-.profile .fixed ul li.mw-list-item {
-  margin: 0px;
-}
-
-.profile .fixed ul li.mw-list-item a {
-  display: inline-block;
-  height: 100%;
+.df-screen {
+  min-height: 100vh;
   width: 100%;
-  border-radius: 0.375rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  font-size: 15px;
-  font-weight: 500;
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
 }
 
-.profile .fixed ul li.mw-list-item a:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+.df-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  display: flex;
+  align-items: center;
+  height: 4rem;
 }
 
-/* 분류 */
-
-.catlinks {
-  margin: 0px !important;
-  margin-top: 0.5rem !important;
-  margin-bottom: 0.125rem !important;
-  display: flex !important;
-  border-width: 0px !important;
-  background-color: transparent !important;
-  padding: 0px !important;
+.df-nav-inner {
+  margin: 0 auto;
+  padding: 0 0.75rem;
+  display: flex;
+  align-items: center;
+  max-width: 80rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
-.catlinks .mw-normal-catlinks {
-  width: 100% !important;
-  line-height: 0 !important;
-  color: transparent !important;
+.df-logo-anchor {
+  outline: none;
+  transition: all 300ms ease-in-out;
 }
 
-.catlinks .mw-normal-catlinks > a {
-  display: none;
+.df-logo-anchor:focus {
+  filter: brightness(95%);
 }
 
-.catlinks .mw-normal-catlinks ul {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  row-gap: 0.375rem !important;
+.df-logo-anchor > img {
+  height: 1.5rem;
 }
 
-.catlinks .mw-normal-catlinks ul li {
-  margin: 0px !important;
-  margin-right: 0.375rem !important;
-  border-style: none !important;
-  padding: 0px !important;
-  line-height: 1.6 !important;
+.df-nav-menu {
+  position: absolute;
+  margin-left: auto;
+  right: 0.75rem;
 }
 
-.catlinks .mw-normal-catlinks ul li:last-child {
-  margin-right: 0px !important;
+.df-button-wrapper {
+  display: flex;
+  -moz-column-gap: 0.375rem;
+       column-gap: 0.375rem;
 }
 
-.catlinks .mw-normal-catlinks ul li a {
-  white-space: nowrap;
-  border-radius: 9999px;
-  padding-left: 0.875rem;
-  padding-right: 0.875rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  font-size: 15px;
-  line-height: 1;
-  -webkit-text-decoration-style: dotted;
-          text-decoration-style: dotted;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.catlinks .mw-normal-catlinks ul li a:hover {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
-}
-
-.catlinks .mw-normal-catlinks ul li a:focus {
-  --tw-brightness: brightness(.95);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.catlinks .mw-normal-catlinks ul li a:not(.new) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 246 255 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(59 130 246 / var(--tw-text-opacity));
-  -webkit-text-decoration-color: #60a5fa;
-          text-decoration-color: #60a5fa;
-}
-
-.catlinks .mw-normal-catlinks ul li a:not(.new):hover {
-  color: rgb(59 130 246 / 0.8);
-}
-
-.catlinks .mw-normal-catlinks ul li a:not(.new):focus {
-  color: rgb(59 130 246 / 0.8);
-}
-
-.catlinks .mw-normal-catlinks ul li a.new {
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(254 242 242 / var(--tw-bg-opacity)) !important;
-  --tw-text-opacity: 1 !important;
-  color: rgb(239 68 68 / var(--tw-text-opacity)) !important;
-  -webkit-text-decoration-color: #f87171 !important;
-          text-decoration-color: #f87171 !important;
-}
-
-.catlinks .mw-normal-catlinks ul li a.new:hover {
-  color: rgb(239 68 68 / 0.8) !important;
-}
-
-.catlinks .mw-normal-catlinks ul li a.new:focus {
-  color: rgb(239 68 68 / 0.8) !important;
-}
-
-/* ===== 목차 ===== */
-
-/* 목차 블록 */
-
-#content #toc {
-  margin-top: 0.75rem !important;
-  display: flex !important;
-  width: -webkit-max-content !important;
-  width: -moz-max-content !important;
-  width: max-content !important;
-  max-width: 100% !important;
-  flex-direction: column !important;
-  border-radius: 1rem !important;
-  border-width: 2px !important;
-  --tw-border-opacity: 1 !important;
-  border-color: rgb(243 244 246 / var(--tw-border-opacity)) !important;
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity)) !important;
-  padding-left: 1rem !important;
-  padding-right: 1rem !important;
-  padding-top: 0.625rem !important;
-  padding-bottom: 0.625rem !important;
-  font-size: 15px !important;
-  line-height: 1 !important;
-}
-
-#content #toc::before {
-  width: -webkit-max-content !important;
-  width: -moz-max-content !important;
-  width: max-content !important;
-  -webkit-user-select: none !important;
-     -moz-user-select: none !important;
-      -ms-user-select: none !important;
-          user-select: none !important;
-  font-size: 0.875rem !important;
-  line-height: 1.25rem !important;
-  line-height: 1 !important;
-  --tw-text-opacity: 1 !important;
-  color: rgb(107 114 128 / var(--tw-text-opacity)) !important;
-  --tw-content: "목차" !important;
-  content: var(--tw-content) !important;
-}
-
-/* 목차 타이틀, 숨기기/보이기 버튼 */
-
-#content #toc .toctitle {
-  display: none;
-}
-
-/* 최상위 링크 목록 */
-
-#content #toc ul {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  list-style-type: none;
-}
-
-/* 최상위 링크 목록 항목 */
-
-#content #toc ul li {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-/* 최상위 아닌 링크 목록 */
-
-#content #toc ul li ul {
-  margin-left: 1.25rem !important;
-}
-
-/* =============== */
-
-/* ===== 본문 헤딩 ===== */
-
-/* h1 */
-
-#content h1 {
-  margin-bottom: 0.5rem;
-  --tw-border-opacity: 1;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity));
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  font-weight: 600;
-}
-
-/* h2 */
-
-#content h2 {
-  margin-bottom: 0.5rem;
-  --tw-border-opacity: 1;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity));
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 600;
-}
-
-/* h3 */
-
-#content h3 {
-  margin-bottom: 0.5rem;
-  --tw-border-opacity: 1;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity));
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-weight: 600;
-}
-
-/* h4, h5, h6 - 크기가 작으면 읽기 어려워 고정 */
-
-#content h4, #content h5, #content h6 {
-  margin-bottom: 0.5rem;
-  --tw-border-opacity: 1;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity));
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-weight: 600;
-}
-
-/* =============== */
-
-/* ===== 본문 링크 ===== */
-
-/* 기본 스타일 */
-
-#content a {
-  -webkit-text-decoration-style: dotted;
-          text-decoration-style: dotted;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
-  transition-duration: 300ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-#content a:hover {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
-}
-
-#content a:focus {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
-}
-
-/* 존재하는 내부 문서로의 링크 */
-
-#content a:not(.new, .external) {
-  --tw-text-opacity: 1;
-  color: rgb(59 130 246 / var(--tw-text-opacity));
-  -webkit-text-decoration-color: #60a5fa;
-          text-decoration-color: #60a5fa;
-}
-
-#content a:not(.new, .external):hover {
-  color: rgb(59 130 246 / 0.8);
-}
-
-#content a:not(.new, .external):focus {
-  color: rgb(59 130 246 / 0.8);
-}
-
-/* 존재하지 않는 내부 문서로의 링크 */
-
-#content a.new {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
-  -webkit-text-decoration-color: #f87171;
-          text-decoration-color: #f87171;
-}
-
-#content a.new:hover {
-  color: rgb(239 68 68 / 0.8);
-}
-
-#content a.new:focus {
-  color: rgb(239 68 68 / 0.8);
-}
-
-/* 외부 페이지로의 링크 */
-
-#content :not(.sub-box .info) > a.external {
-  --tw-text-opacity: 1 !important;
-  color: rgb(5 150 105 / var(--tw-text-opacity)) !important;
-}
-
-#content :not(.sub-box .info) > a.external::before {
-  position: relative !important;
-  top: 0.125rem !important;
-  margin-right: 0.125rem !important;
-  display: inline-block !important;
-  height: 15px !important;
-  width: 15px !important;
-  border-radius: 4px !important;
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(5 150 105 / var(--tw-bg-opacity)) !important;
-  background-image: url("https://wiki.tica.fun/images/5/58/Link.svg") !important;
-  background-size: 85% !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  --tw-content: "" !important;
-  content: var(--tw-content) !important;
-}
-
-/* =============== */
-
-/* == 본문 리스트 == */
-
-#content ul {
-  list-style-type: disc;
-}
-
-/* =============== */
-
-/* ==== 테이블 ==== */
-
-#content table {
-  border-collapse: separate !important;
-  border-radius: 10px !important;
-  border-width: 0px !important;
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity)) !important;
-  font-weight: 500 !important;
-  border-spacing: 0 !important;
-}
-
-#content table thead, #content table tbody, #content table tr {
-  border-width: 0px !important;
-}
-
-#content table tr th, #content table tr td {
-  border-width: 0px !important;
-  border-right-width: 1px !important;
-  border-bottom-width: 1px !important;
-  --tw-border-opacity: 1 !important;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity)) !important;
-  padding-left: 1rem !important;
-  padding-right: 1rem !important;
-  padding-top: 0.375rem !important;
-  padding-bottom: 0.375rem !important;
-}
-
-#content table tr th:first-child, #content table tr td:first-child {
-  border-left-width: 1px !important;
-}
-
-#content table tr th {
-  border-top-width: 1px !important;
-}
-
-#content table tr:first-child *:first-child {
-  border-top-left-radius: 10px !important;
-}
-
-#content table tr:first-child *:last-child {
-  border-top-right-radius: 10px !important;
-}
-
-#content table tr:last-child *:first-child {
-  border-bottom-left-radius: 10px !important;
-}
-
-#content table tr:last-child *:last-child {
-  border-bottom-right-radius: 10px !important;
-}
-
-/* =============== */
-
-/* ===== 각주 ===== */
-
-#content .mw-references-wrap {
-  margin-top: 0.5rem !important;
-  margin-bottom: 0.5rem !important;
-}
-
-#content .mw-references-wrap .references {
-  margin-left: 1.25rem !important;
-  margin-right: 1.25rem !important;
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
-  list-style-type: decimal !important;
-}
-
-#content .mw-references-wrap .references *::marker {
-  --tw-text-opacity: 1 !important;
-  color: rgb(107 114 128 / var(--tw-text-opacity)) !important;
-}
-
-#content .mw-references-wrap .references::marker {
-  --tw-text-opacity: 1 !important;
-  color: rgb(107 114 128 / var(--tw-text-opacity)) !important;
-}
-
-/* =============== */
-
-/* ===== 코드 ===== */
-
-#content pre:not(.wikiEditor-ui pre) {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+.df-logon-menu-button {
+  padding: 0.5rem 0.813rem;
+  transition: background-color 300ms ease-in-out;
+  border: 0;
   border-radius: 0.75rem;
+  outline: none;
+  background-color: var(--color-gray-100);
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
-#content code {
+.df-logon-menu-button:hover,
+.df-logon-menu-button:focus {
+  background-color: var(--color-gray-200);
+}
+
+.df-logon-menu-button i {
+  color: var(--color-gray-500);
+}
+
+.df-logon-menu-popup {
+  position: fixed;
+  height: 0;
+}
+
+.df-logon-menu-popup-inner {
+  position: relative;
+  background-color: var(--color-gray-50);
+  padding: 0.375rem;
+  border: 1px solid var(--color-gray-50);
+  border-radius: 0.5rem;
+  box-shadow: 0px 13px 27px -5px rgba(50, 50, 93, 0.25), 0px 8px 16px -8px rgba(0, 0, 0, 0.3), 0px -6px 16px -6px rgba(0, 0, 0, 0.025);
+  right: calc(100% - 42px);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(0) translateY(-1rem);
+  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out, visibility 300ms ease-in-out;
+}
+
+.df-logon-menu:hover .df-logon-menu-popup-inner,
+.df-logon-menu:focus-within .df-logon-menu-popup-inner {
+  opacity: 100%;
+  visibility: visible;
+  transform: translateX(0.25rem) translateY(0);
+}
+
+.df-logon-menu-popup-item {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--color-gray-900);
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
   border-radius: 0.375rem;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
-  padding-top: 0.125rem;
-  padding-bottom: 0.125rem;
+  transition: background-color 300ms ease-in-out;
+  line-height: 1.4rem;
 }
 
-/* =============== */
-
-/* table {
-  @apply w-max border-0 rounded-[10px] bg-gray-100;
-}
-
-table tr {
-  @apply border-gray-200 !important;
-}
-
-table tr td {
-  @apply border px-3.5 py-2.5 leading-none !important;
-}
-
-table tr td:not(:last-child) {
-  @apply border-r border-gray-200 !important;
-}
-
-table tr td * {
-  @apply leading-none;
-}
-
-table tr:first-child td:first-child {
-  @apply rounded-tl-[10px];
-}
-
-table tr:first-child td:last-child {
-  @apply rounded-tr-[10px];
-}
-
-table tr:last-child td:first-child {
-  @apply rounded-bl-[10px];
-}
-
-table tr:last-child td:last-child {
-  @apply rounded-br-[10px];
-} */
-
-/* 
-.prose p {
-  @apply my-2;
-}
-
-.prose ul li {
-  @apply m-0 mb-[0.1rem];
-}
-
-.prose #mw-content-text * {
-  @apply outline-none;
-}
-
-.prose #mw-content-text p {
-  @apply leading-5;
-}
-
-.prose #mw-content-text #toc {
-  @apply flex flex-col w-max bg-gray-100 border-2 border-gray-100 rounded-2xl px-4 py-2.5 mt-3 leading-none text-[15px] before:content-["목차"] before:text-gray-500 before:text-sm before:w-max before:leading-none before:select-none;
-}
-
-.prose #mw-content-text .toctitle {
-  @apply hidden;
-}
-
-.prose #mw-content-text ul {
-  @apply m-0;
-}
-
-.prose #mw-content-text ul li:not(.toclevel-1) {
-  @apply pl-2;
-}
-
-.prose #mw-content-text ul li span.tocnumber {
-  @apply font-normal after:content-['.'] !important;
-}
-
-.prose #mw-content-text ul li.toclevel-1 {
-  @apply p-0;
-}
-
-.prose #mw-content-text > :not(#toc) > ul {
-  @apply pl-6 my-2 !important;
-}
-
-.prose #mw-content-text > :not(#toc) > ul li {
-  @apply pl-0 mt-0 mb-0.5 marker:text-gray-400;
-}
-
-.wikitable {
-  @apply w-max border-0 rounded-[10px] bg-gray-100;
-}
-
-.wikitable tr {
-  @apply border-gray-200 !important;
-}
-
-.wikitable tr td {
-  @apply border px-3.5 py-2.5 leading-none !important;
-}
-
-.wikitable tr td:not(:last-child) {
-  @apply border-r border-gray-200 !important;
-}
-
-.wikitable tr td * {
-  @apply leading-none;
-}
-
-.wikitable tr:first-child td:first-child {
-  @apply rounded-tl-[10px];
-}
-
-.wikitable tr:first-child td:last-child {
-  @apply rounded-tr-[10px];
-}
-
-.wikitable tr:last-child td:first-child {
-  @apply rounded-bl-[10px];
-}
-
-.wikitable tr:last-child td:last-child {
-  @apply rounded-br-[10px];
-} */
-
-/* .catlinks-allhidden {
-  @apply hidden !important;
-}
-
-.prose a.new[href],
-#catlinks a.new[href] {
-  @apply text-red-500 hover:text-red-500/80 focus:text-red-500/80 decoration-red-400 !important;
+.df-logon-menu-popup-item:hover {
+  background-color: var(--color-gray-100);
+  text-decoration: none;
 }
 
-.prose a.external[href] {
-  @apply text-emerald-600 before:content-[""] before:h-[15px] before:w-[15px] before:mr-0.5 before:relative before:top-0.5 before:inline-block before:bg-emerald-600 before:bg-[url("https://wiki.tica.fun/images/5/58/Link.svg")] before:bg-85% before:bg-no-repeat before:bg-center before:rounded-[4px] !important;
-} */
-
-/* html {
-  font-family: 'Noto Sans KR', sans-serif;
-  background-color: #f1f1f1;
-}
-
-a {
-  @apply text-blue-500;
-}
-
-a:visited {
-  @apply text-blue-600;
-}
-
-.searchboxInput {
-  @apply shadow rounded text-center border-neutral-300 cursor-pointer focus:cursor-text focus:text-left transition-all;
-}
-
-.searchbox > .mw-ui-button {
-  @apply hidden;
-}
-
-.wikitable {
-  @apply border-0 border-separate rounded bg-transparent;
-  border-spacing: 0px 0px;
-}
-
-.wikitable > caption {
-  @apply mb-1;
-}
-
-.wikitable > * > tr {
-  @apply border-0;
-}
-
-.wikitable > * > tr > th {
-  @apply bg-neutral-100 hover:bg-neutral-200;
-}
-
-.wikitable > * > tr > td {
-  @apply hover:bg-neutral-100;
-}
-
-.wikitable > * > tr > th,
-.wikitable > * > tr > td {
-  @apply border border-neutral-200 px-2 py-1;
-}
-
-.wikitable > * > tr:first-child > th:first-child,
-.wikitable > * > tr:first-child > td:first-child {
-  @apply rounded-tl;
-}
-
-.wikitable > * > tr:first-child > th:last-child,
-.wikitable > * > tr:first-child > td:last-child {
-  @apply rounded-tr;
-}
-
-.wikitable > * > tr:last-child > th:first-child,
-.wikitable > * > tr:last-child > td:first-child {
-  @apply rounded-bl;
-}
-
-.wikitable > * > tr:last-child > th:last-child,
-.wikitable > * > tr:last-child > td:last-child {
-  @apply rounded-br-lg;
-}
-
-.oo-ui-toolbar {
-  @apply sticky top-0 z-40;
-}
-
-#comment {
-  @apply resize-none shadow border bg-neutral-100 p-3;
-}
-
-.site-button {
-  @apply rounded bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 cursor-pointer shadow;
-}
-
-h2 {
-  @apply text-lg font-bold mb-3 border-b-neutral-300;
-}
-
-.mw-references-wrap {
-  @apply border-t mt-10 text-neutral-400;
-}
-
-.references {
-  @apply m-0 ml-3 !important;
-}
-
-.ve-ce-nail {
-  display: none;
-}
-
-br {
-  @apply my-3;
+.df-logon-menu-popup-item:visited {
+  color: var(--color-gray-900);
 }
 
-ul {
-  @apply list-disc;
+.df-upload-button {
+  padding: 0.5rem 0.625rem;
+  transition: background-color 300ms ease-in-out;
+  border-radius: 0.75rem;
+  outline: none;
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-500);
+  display: block;
 }
 
-.oo-ui-dialog {
-  z-index: 60 !important;
-} */
-
-.hover\:bg-gray-200:hover {
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity)) !important;
-}
-
-.hover\:bg-gray-100:hover {
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity)) !important;
-}
-
-.focus\:bg-gray-200:focus {
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity)) !important;
-}
-
-.focus\:brightness-95:focus {
-  --tw-brightness: brightness(.95) !important;
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
-}
-
-.focus\:filter:focus {
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
-}
-
-.group:focus-within .group-focus-within\:visible {
-  visibility: visible !important;
-}
-
-.group:focus-within .group-focus-within\:translate-x-1 {
-  --tw-translate-x: 0.25rem !important;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
-}
-
-.group:focus-within .group-focus-within\:translate-y-0 {
-  --tw-translate-y: 0px !important;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
+.df-upload-button:hover,
+.df-upload-button:focus {
+  background-color: var(--color-gray-200);
 }
 
-.group:focus-within .group-focus-within\:opacity-100 {
-  opacity: 1 !important;
+.df-upload-button:visited {
+  color: var(--color-gray-500);
 }
 
-.group:hover .group-hover\:visible {
-  visibility: visible !important;
+.df-login-button {
+  padding: 0.5rem 0.75rem;
+  transition: background-color 300ms ease-in-out;
+  border-radius: 0.75rem;
+  outline: none;
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-500);
+  display: block;
 }
 
-.group:hover .group-hover\:translate-x-1 {
-  --tw-translate-x: 0.25rem !important;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
+.df-login-button:hover,
+.df-login-button:focus {
+  background-color: var(--color-gray-200);
 }
 
-.group:hover .group-hover\:translate-y-0 {
-  --tw-translate-y: 0px !important;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
+.df-login-button:visited {
+  color: var(--color-gray-500);
 }
 
-.group:hover .group-hover\:opacity-100 {
-  opacity: 1 !important;
-}
+/* xs */
 
 @media (min-width: 475px) {
-  .xs\:static {
-    position: static !important;
+  .df-nav-inner {
+    padding: 0 1.5rem;
+    width: 100%;
   }
 
-  .xs\:w-full {
-    width: 100% !important;
-  }
-
-  .xs\:px-6 {
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
-  }
-
-  .xs\:text-4xl {
-    font-size: 2.25rem !important;
-    line-height: 2.5rem !important;
+  .df-nav-menu {
+    position: static;
   }
 }

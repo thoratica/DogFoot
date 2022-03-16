@@ -12,6 +12,8 @@ class DogFootTemplate extends BaseTemplate
 
   public function execute()
   {
+    $useDefaultURL = false;
+
     $this->data["content_actions"]["nstab-main"]["text"] = wfMessage("view")->parse();
     $this->html("headelement");
 ?>
@@ -75,10 +77,10 @@ class DogFootTemplate extends BaseTemplate
                 <?php
                 if ($this->getSkin()->getUser()->isRegistered()) {
                 ?>
-                  <a id="ca-edit" href="<?php echo $this->data["content_actions"]["ve-edit"]["href"] ?? "/w/" . $this->getSkin()->getTitle() . "?veaction=edit" ?>" class="df-header-button df-header-button-veditor" title="시각 편집 모드">
+                  <a id="ca-edit" href="<?php echo ($useDefaultURL && $this->data["content_actions"]["ve-edit"]["href"]) ? $this->data["content_actions"]["ve-edit"]["href"] : "/w/" . $this->getSkin()->getTitle() . "?veaction=edit" ?>" class="df-header-button df-header-button-veditor" title="시각 편집 모드">
                     <i class="fa-solid fa-eye"></i>
                   </a>
-                  <a href="<?php echo $this->data["content_actions"]["edit"]["href"] ?? "#" ?>" class="df-header-button df-header-button-editor" title="원본 편집 모드">
+                  <a href="<?php echo ($useDefaultURL && $this->data["content_actions"]["edit"]["href"] ?? "#") ? $this->data["content_actions"]["edit"]["href"] ?? "#" : "/w/" . $this->getSkin()->getTitle() . "?action=edit" ?>" class="df-header-button df-header-button-editor" title="원본 편집 모드">
                     <i class="fa-solid fa-pen"></i>
                   </a>
 
@@ -88,16 +90,16 @@ class DogFootTemplate extends BaseTemplate
                     </button>
                     <div class="df-header-buttons-more-wrapper">
                       <div class="df-header-buttons-more">
-                        <a href="<?php echo $this->data["content_actions"]["history"]["href"] ?? "#" ?>" class="df-header-more-button df-header-more-button-history" title="역사">
+                        <a href="<?php echo ($useDefaultURL && $this->data["content_actions"]["history"]["href"] ?? "#") ? $this->data["content_actions"]["history"]["href"] ?? "#" : "/w/" . $this->getSkin()->getTitle() . "?action=history" ?>" class="df-header-more-button df-header-more-button-history" title="역사">
                           <i class="fa-solid fa-clock-rotate-left"></i>
                         </a>
-                        <a href="<?php echo $this->data["content_actions"]["move"]["href"] ?? "#" ?>" class="df-header-more-button df-header-more-button-move" title="이동">
+                        <a href="<?php echo ($useDefaultURL && $this->data["content_actions"]["move"]["href"] ?? "#") ? $this->data["content_actions"]["move"]["href"] ?? "#" : "/w/특수:이동/" . $this->getSkin()->getTitle() ?>" class="df-header-more-button df-header-more-button-move" title="이동">
                           <i class="fa-solid fa-angles-right"></i>
                         </a>
-                        <a href="<?php echo $this->data["content_actions"]["delete"]["href"] ?? "#" ?>" class="df-header-more-button df-header-more-button-delete" title="삭제">
+                        <a href="<?php echo ($useDefaultURL && $this->data["content_actions"]["delete"]["href"] ?? "#") ? $this->data["content_actions"]["delete"]["href"] ?? "#" : "/w/" . $this->getSkin()->getTitle() . "?action=delete" ?>" class="df-header-more-button df-header-more-button-delete" title="삭제">
                           <i class="fa-solid fa-trash"></i>
                         </a>
-                        <a href="<?php echo $this->data["content_actions"]["protect"]["href"] ?? "#" ?>" class="df-header-more-button df-header-more-button-protect" title="보호">
+                        <a href="<?php echo ($useDefaultURL && $this->data["content_actions"]["protect"]["href"] ?? "#") ? $this->data["content_actions"]["protect"]["href"] ?? "#" : "/w/" . $this->getSkin()->getTitle() . "?action=protect" ?>" class="df-header-more-button df-header-more-button-protect" title="보호">
                           <i class="fa-solid fa-lock"></i>
                         </a>
                       </div>

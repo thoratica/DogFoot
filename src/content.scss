@@ -16,7 +16,7 @@
       text-decoration: $color-transparent underline dotted;
       transition: text-decoration-color 300ms ease-in-out;
 
-      &:not(.new) {
+      &:not(.new, .external) {
         color: $color-blue-500;
 
         &:hover {
@@ -29,6 +29,26 @@
 
         &:hover {
           text-decoration-color: $color-red-400;
+        }
+      }
+
+      &.external:not(.sub-box-wrapper .sub-box .items .info a) {
+        color: $color-emerald-600;
+
+        &::before {
+          content: '';
+          height: 15px;
+          width: 15px;
+          margin-right: 0.25rem;
+          position: relative;
+          top: 0.125rem;
+          display: inline-block;
+          background-color: $color-emerald-600;
+          background-image: url('https://dutkyo.wiki/images/5/58/Link.svg');
+          background-size: 85%;
+          background-repeat: no-repeat;
+          background-position: center;
+          border-radius: 0.25rem;
         }
       }
     }

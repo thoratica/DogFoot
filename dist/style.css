@@ -332,10 +332,10 @@
   text-decoration: transparent underline dotted;
   transition: text-decoration-color 300ms ease-in-out;
 }
-#content #mw-content-text .mw-parser-output a:not(.new) {
+#content #mw-content-text .mw-parser-output a:not(.new, .external) {
   color: #3b82f6;
 }
-#content #mw-content-text .mw-parser-output a:not(.new):hover {
+#content #mw-content-text .mw-parser-output a:not(.new, .external):hover {
   text-decoration-color: #60a5fa;
 }
 #content #mw-content-text .mw-parser-output a.new {
@@ -343,6 +343,24 @@
 }
 #content #mw-content-text .mw-parser-output a.new:hover {
   text-decoration-color: #f87171;
+}
+#content #mw-content-text .mw-parser-output a.external:not(.sub-box-wrapper .sub-box .items .info a) {
+  color: #059669;
+}
+#content #mw-content-text .mw-parser-output a.external:not(.sub-box-wrapper .sub-box .items .info a)::before {
+  content: "";
+  height: 15px;
+  width: 15px;
+  margin-right: 0.25rem;
+  position: relative;
+  top: 0.125rem;
+  display: inline-block;
+  background-color: #059669;
+  background-image: url("https://dutkyo.wiki/images/5/58/Link.svg");
+  background-size: 85%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0.25rem;
 }
 
 * {

@@ -44,8 +44,12 @@ tt,
 kbd,
 samp,
 .mw-code,
-pre * {
-  font-family: monospace !important;
+pre *,
+.ace_content *,
+.ace_gutter-cell,
+.CodeMirror-linenumber,
+.mw-editfont-monospace {
+  font-family: 'JetBrains Mono', monospace !important;
 }
 
 body {

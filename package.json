@@ -4,14 +4,11 @@
   "repository": "https://github.com/thoratica/dogfoot.git",
   "license": "MIT",
   "scripts": {
-    "build": "tailwindcss -i src/styles.css -o dist/styles.css",
-    "watch": "tailwindcss --watch -i src/styles.css -o dist/styles.css"
+    "build": "sass --no-source-map src/style.scss dist/style.css",
+    "watch": "sass --watch --no-source-map src/style.scss dist/style.css"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.2",
-    "autoprefixer": "^10.4.2",
-    "postcss": "^8.4.8",
-    "tailwindcss": "^3.0.23"
+    "sass": "^1.49.9"
   },
   "dependencies": {
     "pretendard": "^1.2.1"

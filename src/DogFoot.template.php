@@ -143,9 +143,7 @@ class DogFootTemplate extends BaseTemplate
             </div>
           </div>
           <section id="content">
-            <div id="mw-content-text">
-              <?php $this->html("bodytext"); ?>
-            </div>
+            <?php $this->html("bodytext"); ?>
           </section>
         </article>
       </section>

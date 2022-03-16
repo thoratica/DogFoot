@@ -69,11 +69,10 @@ class DogFootTemplate extends BaseTemplate
                 <?php $this->html("title"); ?>
               </h1>
               <div class="df-header-buttons">
-                <?php echo json_encode($this->data["content_actions"]) ?>
                 <?php
                 if ($this->getSkin()->getUser()->isRegistered()) {
                 ?>
-                  <a id="ca-edit" href="<?php echo $this->data["content_actions"]["ve-edit"]["href"] ?? "#" ?>" class="df-header-button df-header-button-veditor" title="시각 편집 모드">
+                  <a id="ca-edit" href="<?php echo $this->data["content_actions"]["ve-edit"]["href"] ?? "/w/" . $this->getSkin()->getTitle() . "?veaction=edit" ?>" class="df-header-button df-header-button-veditor" title="시각 편집 모드">
                     <i class="fa-solid fa-eye"></i>
                   </a>
                   <a href="<?php echo $this->data["content_actions"]["edit"]["href"] ?? "#" ?>" class="df-header-button df-header-button-editor" title="원본 편집 모드">

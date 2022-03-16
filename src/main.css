@@ -32,6 +32,28 @@
   --color-red-900: #881337;
 }
 
+* {
+  box-sizing: border-box;
+  font-family: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
+    'Noto Sans KR', 'Malgun Gothic', sans-serif;
+}
+
+pre,
+code,
+tt,
+kbd,
+samp,
+.mw-code,
+pre * {
+  font-family: monospace !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5rem;
+}
+
 .df-main {
   margin: 0 auto;
   padding: 0 0.75rem;
@@ -114,6 +136,7 @@
 .df-header-buttons-more-wrapper {
   position: fixed;
   height: 0;
+  z-index: 999;
 }
 
 .df-header-buttons-more {

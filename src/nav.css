@@ -10,18 +10,26 @@
   --color-gray-700: #374151;
   --color-gray-800: #1f2937;
   --color-gray-900: #111827;
-}
-
-* {
-  box-sizing: border-box;
-  font-family: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
-    'Noto Sans KR', 'Malgun Gothic', sans-serif;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  line-height: 1.5rem;
+  --color-blue-50: #eff6ff;
+  --color-blue-100: #dbeafe;
+  --color-blue-200: #bfdbfe;
+  --color-blue-300: #93c5fd;
+  --color-blue-400: #60a5fa;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+  --color-blue-700: #1d4ed8;
+  --color-blue-800: #1e40af;
+  --color-blue-900: #1e3a8a;
+  --color-red-50: #fff1f2;
+  --color-red-100: #ffe4e6;
+  --color-red-200: #fecdd3;
+  --color-red-300: #fda4af;
+  --color-red-400: #fb7185;
+  --color-red-500: #f43f5e;
+  --color-red-600: #e11d48;
+  --color-red-700: #be123c;
+  --color-red-800: #9f1239;
+  --color-red-900: #881337;
 }
 
 .df-screen {
@@ -34,6 +42,7 @@ body {
   display: flex;
   align-items: center;
   height: 4rem;
+  z-index: 999;
 }
 
 .df-nav-inner {
@@ -93,6 +102,7 @@ body {
 .df-logon-menu-popup {
   position: fixed;
   height: 0;
+  z-index: 999;
 }
 
 .df-logon-menu-popup-inner {
@@ -109,6 +119,7 @@ body {
   transform: translate(0, -1rem);
   transition: transform 300ms ease-in-out, opacity 300ms ease-in-out, visibility 300ms ease-in-out;
   width: max-content;
+  z-index: 999;
 }
 
 .df-logon-menu:hover .df-logon-menu-popup-inner,

@@ -163,6 +163,9 @@
       }
 
       .df-login-button {
+        position: absolute;
+        top: 0.75rem;
+        right: 0.75rem;
         padding: 0.5rem 0.75rem;
         transition: background-color 300ms ease-in-out;
         border-radius: 0.75rem;
@@ -170,6 +173,12 @@
         background-color: $color-gray-100;
         color: $color-gray-500;
         display: block;
+
+        @media (min-width: $xs) {
+          & {
+            position: static;
+          }
+        }
 
         &:hover,
         &:focus {

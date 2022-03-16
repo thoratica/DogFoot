@@ -146,6 +146,9 @@
   color: #111827;
 }
 .df-nav .df-nav-inner .df-nav-menu .df-login-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
   padding: 0.5rem 0.75rem;
   transition: background-color 300ms ease-in-out;
   border-radius: 0.75rem;
@@ -153,6 +156,11 @@
   background-color: #f3f4f6;
   color: #6b7280;
   display: block;
+}
+@media (min-width: 475px) {
+  .df-nav .df-nav-inner .df-nav-menu .df-login-button {
+    position: static;
+  }
 }
 .df-nav .df-nav-inner .df-nav-menu .df-login-button:hover, .df-nav .df-nav-inner .df-nav-menu .df-login-button:focus {
   background-color: #e5e7eb;

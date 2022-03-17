@@ -291,7 +291,7 @@
   flex-wrap: wrap;
   gap: 0.3rem;
   line-height: 1.7rem;
-  margin-top: 0.125rem;
+  margin-top: 0.25rem;
 }
 .df-main .df-article .df-header .df-header-categories .df-header-category {
   padding: 0 0.875rem;
@@ -398,6 +398,42 @@
 }
 #content #mw-content-text .mw-parser-output #toc ul li ul {
   margin-left: 1rem;
+}
+#content #mw-content-text .mw-parser-output table {
+  background-color: #f8f9fa;
+  color: #202122;
+  margin: 1em 0;
+  border: 1px solid #e5e7eb;
+  border-collapse: collapse;
+}
+#content #mw-content-text .mw-parser-output table th,
+#content #mw-content-text .mw-parser-output table td {
+  border-color: #e5e7eb !important;
+}
+#content #mw-content-text .mw-parser-output table.wikitable {
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 0.7rem;
+}
+#content #mw-content-text .mw-parser-output table.wikitable tbody tr :is(th, td) {
+  border-bottom-width: 0;
+  padding: 0.25rem 0.75rem;
+}
+#content #mw-content-text .mw-parser-output table.wikitable tbody tr:first-child :is(th, td):first-child {
+  border-top-left-radius: 0.7rem;
+}
+#content #mw-content-text .mw-parser-output table.wikitable tbody tr:first-child :is(th, td):last-child {
+  border-top-right-radius: 0.7rem;
+}
+#content #mw-content-text .mw-parser-output table.wikitable tbody tr:last-child :is(th, td) {
+  border-bottom-width: 1px;
+}
+#content #mw-content-text .mw-parser-output table.wikitable tbody tr:last-child :is(th, td):first-child {
+  border-bottom-left-radius: 0.7rem;
+}
+#content #mw-content-text .mw-parser-output table.wikitable tbody tr:last-child :is(th, td):last-child {
+  border-bottom-right-radius: 0.7rem;
 }
 
 * {

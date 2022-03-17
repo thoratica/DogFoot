@@ -333,6 +333,7 @@
 #content #mw-content-text a {
   font-weight: 500;
   text-decoration: transparent underline dotted;
+  text-underline-offset: 2px;
   transition: text-decoration-color 300ms ease-in-out;
 }
 #content #mw-content-text a:not(.new, .external) {
@@ -434,6 +435,17 @@
 }
 #content #mw-content-text table.wikitable tbody tr:last-child :is(th, td):last-child {
   border-bottom-right-radius: 0.7rem;
+}
+#content #mw-content-text .warningbox {
+  background-color: #fef3c7;
+  border: 0;
+  color: #f59e0b;
+  border-radius: 0.7rem;
+}
+#content #mw-content-text .warningbox .mw-continue-editing a {
+  color: #f59e0b;
+  text-decoration: underline dotted;
+  text-underline-offset: 2px;
 }
 
 * {

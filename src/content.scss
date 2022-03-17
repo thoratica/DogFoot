@@ -14,6 +14,7 @@
   a {
     font-weight: 500;
     text-decoration: $color-transparent underline dotted;
+    text-underline-offset: 2px;
     transition: text-decoration-color 300ms ease-in-out;
 
     &:not(.new, .external) {
@@ -143,6 +144,19 @@
           }
         }
       }
+    }
+  }
+
+  .warningbox {
+    background-color: $color-amber-100;
+    border: 0;
+    color: $color-amber-500;
+    border-radius: 0.7rem;
+
+    .mw-continue-editing a {
+      color: $color-amber-500;
+      text-decoration: underline dotted;
+      text-underline-offset: 2px;
     }
   }
 }

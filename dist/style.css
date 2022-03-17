@@ -447,6 +447,225 @@
   text-decoration: underline dotted;
   text-underline-offset: 2px;
 }
+#content #mw-content-text .mw-editform .wikiEditor-ui .wikiEditor-ui-view.wikiEditor-ui-view-wikitext {
+  border: 0;
+}
+#content #mw-content-text .mw-editform .wikiEditor-ui .wikiEditor-ui-view.wikiEditor-ui-view-wikitext .wikiEditor-ui-top {
+  border-bottom: 0;
+}
+#content #mw-content-text .mw-editform .wikiEditor-ui .wikiEditor-ui-view.wikiEditor-ui-view-wikitext .wikiEditor-ui-top #wikiEditor-ui-toolbar {
+  border-bottom: 1px solid #e5e7eb;
+  border-radius: 0.7rem 0.7rem 0 0;
+  background-color: #f3f4f6;
+  box-shadow: none;
+}
+#content #mw-content-text .mw-editform .wikiEditor-ui .wikiEditor-ui-view.wikiEditor-ui-view-wikitext .wikiEditor-ui-top #wikiEditor-ui-toolbar .group {
+  border-color: #e5e7eb;
+}
+#content #mw-content-text .mw-editform .wikiEditor-ui .wikiEditor-ui-view.wikiEditor-ui-view-wikitext .wikiEditor-ui-top #wikiEditor-ui-toolbar .group span.label {
+  height: 36.28px;
+  display: flex;
+  align-items: center;
+  color: #6b7280;
+}
+#content #mw-content-text .mw-editform .wikiEditor-ui .wikiEditor-ui-view.wikiEditor-ui-view-wikitext .wikiEditor-ui-top #wikiEditor-ui-toolbar .group .oo-ui-buttonElement-button {
+  transition: background-color 300ms ease-in-out;
+  border-radius: 0.7rem;
+}
+#content #mw-content-text .mw-editform .wikiEditor-ui .wikiEditor-ui-view.wikiEditor-ui-view-wikitext .wikiEditor-ui-top #wikiEditor-ui-toolbar .group .tool a.label {
+  height: 36.28px;
+  display: flex;
+  align-items: flex-end;
+  color: #6b7280;
+  text-decoration: none;
+}
+#content #mw-content-text .mw-editform .wikiEditor-ui .wikiEditor-ui-view.wikiEditor-ui-view-wikitext .wikiEditor-ui-top #wikiEditor-ui-toolbar .group .tool a.label::after {
+  height: 36.28px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ctitle%3E down %3C/title%3E%3Cpath d='m12.085 4.943-4.035 3.86-3.947-3.86-1.053 1.053 5 5 5-5z' fill='%236b7280'/%3E%3C/svg%3E%0A");
+}
+#content #mw-content-text .mw-editform .wikiEditor-ui .wikiEditor-ui-view.wikiEditor-ui-view-wikitext .wikiEditor-ui-top #wikiEditor-ui-toolbar .tabs .tab a {
+  height: 36.28px;
+  display: flex;
+  align-items: center;
+  color: #6b7280;
+  text-decoration: none;
+}
+#content #mw-content-text .mw-editform .wikiEditor-ui .wikiEditor-ui-view.wikiEditor-ui-view-wikitext .wikiEditor-ui-top #wikiEditor-ui-toolbar .tabs .tab a::before {
+  height: 36.28px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ctitle%3E down %3C/title%3E%3Cpath d='m12.085 4.943-4.035 3.86-3.947-3.86-1.053 1.053 5 5 5-5z' fill='%236b7280'/%3E%3C/svg%3E%0A");
+}
+#content #mw-content-text .mw-editform .wikiEditor-ui .wikiEditor-ui-view.wikiEditor-ui-view-wikitext .wikiEditor-ui-top #wikiEditor-ui-toolbar .sections .section {
+  border-color: #e5e7eb;
+}
+#content #mw-content-text .mw-editform .wikiEditor-ui .wikiEditor-ui-view.wikiEditor-ui-view-wikitext .wikiEditor-ui-bottom .wikiEditor-ui-text .CodeMirror-gutter-elt {
+  background-color: #f3f4f6;
+}
+#content #mw-content-text .mw-editform .wikiEditor-ui .CodeMirror {
+  padding: 0;
+}
+#content #mw-content-text .mw-editform .editOptions {
+  border: 0;
+  border-top: 1px solid #e5e7eb;
+  border-radius: 0 0 0.7rem 0.7rem;
+  background-color: #f3f4f6;
+}
+
+.ui-dialog {
+  border-radius: 1rem !important;
+  border: 0 !important;
+  background-image: unset !important;
+  background-color: #ffffff !important;
+}
+.ui-dialog .ui-dialog-titlebar {
+  background: unset !important;
+  border: 0 !important;
+  padding: 0.7rem 1.2rem 0.5rem 1.2rem !important;
+}
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
+  border: 0 !important;
+  background: unset !important;
+  outline: none !important;
+}
+.ui-dialog.wikiEditor-toolbar-dialog > .ui-dialog-buttonpane {
+  border-top: 0 !important;
+  background-color: transparent;
+  padding: 0 1rem 0.3rem 1rem !important;
+}
+.ui-dialog.wikiEditor-toolbar-dialog > .ui-dialog-buttonpane .ui-dialog-buttonset button:first-child {
+  margin-right: 0.5rem !important;
+}
+
+.ui-button {
+  background: unset !important;
+  background-color: #f3f4f6 !important;
+  border: 0 !important;
+  border-radius: 0.75rem !important;
+  padding: 0.5rem 1.25rem !important;
+  outline: none !important;
+  margin-right: 0 !important;
+  transition: background-color 300ms ease-in-out;
+}
+.ui-button:hover, .ui-button:focus {
+  background-color: #e5e7eb !important;
+}
+.ui-button .ui-button-text {
+  color: #111827;
+  font-size: 1rem;
+  padding: 0 !important;
+}
+
+input {
+  background-color: #f3f4f6;
+  border: 0;
+  border-radius: 0.7rem;
+  outline: 0;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+}
+
+#wikieditor-toolbar-file-dialog {
+  padding: 0 1rem !important;
+}
+#wikieditor-toolbar-file-dialog .wikieditor-toolbar-field-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #f3f4f6;
+  border: 2px solid #f3f4f6;
+  border-radius: 1rem;
+  padding: 0.625rem 1rem !important;
+  line-height: 1;
+  transition: border-color 300ms ease-in-out;
+  margin-top: 0.3rem;
+}
+#wikieditor-toolbar-file-dialog .wikieditor-toolbar-field-wrapper:focus-within {
+  border-color: #3b82f6;
+}
+#wikieditor-toolbar-file-dialog .wikieditor-toolbar-field-wrapper label {
+  color: #6b7280;
+  font-size: 0.75rem;
+  width: max-content;
+  line-height: 1;
+  margin: 0 0 0.125rem 0;
+  user-select: none;
+}
+#wikieditor-toolbar-file-dialog .wikieditor-toolbar-field-wrapper input,
+#wikieditor-toolbar-file-dialog .wikieditor-toolbar-field-wrapper select {
+  border: 0;
+  background-color: transparent;
+  outline: none;
+  line-height: 1;
+  margin: 0.125rem 0;
+  padding: 0;
+  border-radius: 0;
+}
+#wikieditor-toolbar-file-dialog .wikieditor-toolbar-field-wrapper .wikieditor-toolbar-file-alt-help {
+  display: none !important;
+}
+#wikieditor-toolbar-file-dialog .wikieditor-toolbar-field-wrapper br {
+  display: none !important;
+}
+
+.oo-ui-buttonElement-button:not(.wikiEditor-ui-left .oo-ui-buttonElement-button) {
+  background-color: #f3f4f6 !important;
+  color: #6b7280 !important;
+  border: 0 !important;
+  border-radius: 0.75rem !important;
+  transition: background-color 300ms ease-in-out !important;
+  padding: 0.5rem 1.25rem !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+}
+.oo-ui-buttonElement-button:not(.wikiEditor-ui-left .oo-ui-buttonElement-button):hover {
+  background-color: #e5e7eb !important;
+}
+.editOptions .oo-ui-buttonElement-button:not(.wikiEditor-ui-left .oo-ui-buttonElement-button) {
+  background-color: #e5e7eb !important;
+}
+.editOptions .oo-ui-buttonElement-button:not(.wikiEditor-ui-left .oo-ui-buttonElement-button):hover {
+  background-color: #d1d5db !important;
+}
+
+.oo-ui-buttonElement-button:not(.wikiEditor-ui-left .oo-ui-buttonElement-button)#wpSave {
+  background-color: #dbeafe !important;
+  color: #3b82f6 !important;
+}
+.oo-ui-buttonElement-button:not(.wikiEditor-ui-left .oo-ui-buttonElement-button)#wpSave:hover {
+  background-color: #bfdbfe !important;
+}
+#mw-editform-cancel .oo-ui-buttonElement-button:not(.wikiEditor-ui-left .oo-ui-buttonElement-button) {
+  background-color: #fee2e2 !important;
+  color: #ef4444 !important;
+  margin-left: 0.3rem;
+}
+#mw-editform-cancel .oo-ui-buttonElement-button:not(.wikiEditor-ui-left .oo-ui-buttonElement-button):hover {
+  background-color: #fecaca !important;
+}
+
+.oo-ui-checkboxInputWidget span {
+  border: 0 !important;
+  border-radius: 9rem !important;
+  outline: none !important;
+  background-color: #f3f4f6 !important;
+  background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ctitle%3Echeck%3C/title%3E%3Cg fill='%233b82f6'%3E%3Cpath d='M7 14.17L2.83 10l-1.41 1.41L7 17 19 5l-1.41-1.42z'/%3E%3C/g%3E%3C/svg%3E") !important;
+  transition: background-color 300ms ease-in-out;
+}
+.editOptions .oo-ui-checkboxInputWidget span {
+  background-color: #e5e7eb !important;
+}
+
+.oo-ui-checkboxInputWidget input[type=checkbox]:checked + span {
+  background-color: #dbeafe !important;
+}
+
+#wpSummary {
+  border: 0;
+  border-radius: 0.7rem;
+  padding: 1.2rem 0.8rem;
+}
+#wpSummary:focus {
+  box-shadow: inset 0 0 0 1px #3b82f6 !important;
+}
 
 * {
   box-sizing: border-box;

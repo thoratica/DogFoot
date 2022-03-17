@@ -159,4 +159,84 @@
       text-underline-offset: 2px;
     }
   }
+
+  .mw-editform {
+    .wikiEditor-ui {
+      .wikiEditor-ui-view.wikiEditor-ui-view-wikitext {
+        border: 0;
+
+        .wikiEditor-ui-top {
+          border-bottom: 0;
+
+          #wikiEditor-ui-toolbar {
+            border-bottom: 1px solid $color-gray-200;
+            border-radius: 0.7rem 0.7rem 0 0;
+            background-color: $color-gray-100;
+            box-shadow: none;
+
+            .group {
+              border-color: $color-gray-200;
+
+              span.label {
+                height: 36.28px;
+                display: flex;
+                align-items: center;
+                color: $color-gray-500;
+              }
+
+              .oo-ui-buttonElement-button {
+                transition: background-color 300ms ease-in-out;
+                border-radius: 0.7rem;
+              }
+
+              .tool a.label {
+                height: 36.28px;
+                display: flex;
+                align-items: flex-end;
+                color: $color-gray-500;
+                text-decoration: none;
+
+                &::after {
+                  height: 36.28px;
+                  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ctitle%3E down %3C/title%3E%3Cpath d='m12.085 4.943-4.035 3.86-3.947-3.86-1.053 1.053 5 5 5-5z' fill='%236b7280'/%3E%3C/svg%3E%0A");
+                }
+              }
+            }
+
+            .tabs .tab a {
+              height: 36.28px;
+              display: flex;
+              align-items: center;
+              color: $color-gray-500;
+              text-decoration: none;
+
+              &::before {
+                height: 36.28px;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ctitle%3E down %3C/title%3E%3Cpath d='m12.085 4.943-4.035 3.86-3.947-3.86-1.053 1.053 5 5 5-5z' fill='%236b7280'/%3E%3C/svg%3E%0A");
+              }
+            }
+
+            .sections .section {
+              border-color: $color-gray-200;
+            }
+          }
+        }
+
+        .wikiEditor-ui-bottom .wikiEditor-ui-text .CodeMirror-gutter-elt {
+          background-color: $color-gray-100;
+        }
+      }
+
+      .CodeMirror {
+        padding: 0;
+      }
+    }
+
+    .editOptions {
+      border: 0;
+      border-top: 1px solid $color-gray-200;
+      border-radius: 0 0 0.7rem 0.7rem;
+      background-color: $color-gray-100;
+    }
+  }
 }

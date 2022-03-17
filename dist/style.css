@@ -355,7 +355,7 @@
   content: "";
   height: 15px;
   width: 15px;
-  margin-right: 3px;
+  margin-right: 0.125rem;
   position: relative;
   top: 0.125rem;
   display: inline-block;

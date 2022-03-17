@@ -239,4 +239,14 @@
       background-color: $color-gray-100;
     }
   }
+
+  .mw-references-wrap {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid $color-gray-200;
+
+    .references {
+      margin: 0 1.5rem;
+    }
+  }
 }

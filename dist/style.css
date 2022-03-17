@@ -509,6 +509,14 @@
   border-radius: 0 0 0.7rem 0.7rem;
   background-color: #f3f4f6;
 }
+#content #mw-content-text .mw-references-wrap {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+#content #mw-content-text .mw-references-wrap .references {
+  margin: 0 1.5rem;
+}
 
 .ui-dialog {
   border-radius: 1rem !important;

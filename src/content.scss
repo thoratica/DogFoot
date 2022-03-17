@@ -9,6 +9,7 @@
       border-color: $color-gray-200;
       padding-bottom: 0.4rem;
       font-weight: 600;
+      word-break: keep-all;
     }
 
     a {
@@ -39,7 +40,7 @@
           content: '';
           height: 15px;
           width: 15px;
-          margin-right: 0.25rem;
+          margin-right: 3px;
           position: relative;
           top: 0.125rem;
           display: inline-block;

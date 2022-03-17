@@ -37,6 +37,7 @@
           padding: 0;
           border: 0;
           line-height: normal;
+          word-break: keep-all;
         }
 
         .df-header-buttons {
@@ -117,7 +118,8 @@
                     background-color: $color-gray-100;
                   }
 
-                  &.df-header-more-button-history {
+                  &.df-header-more-button-history,
+                  &.df-header-more-button-purge {
                     padding: 0.5rem 0.75rem;
                   }
 

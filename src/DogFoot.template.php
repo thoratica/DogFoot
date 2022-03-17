@@ -102,6 +102,9 @@ class DogFootTemplate extends BaseTemplate
                         <a href="<?php echo ($useDefaultURL && $this->data["content_actions"]["protect"]["href"] ?? "#") ? $this->data["content_actions"]["protect"]["href"] ?? "#" : "/w/" . $this->getSkin()->getTitle() . "?action=protect" ?>" class="df-header-more-button df-header-more-button-protect" title="보호">
                           <i class="fa-solid fa-lock"></i>
                         </a>
+                        <a href="<?php echo ($useDefaultURL && $this->data["content_actions"]["purge"]["href"] ?? "#") ? $this->data["content_actions"]["purge"]["href"] ?? "#" : "/w/" . $this->getSkin()->getTitle() . "?action=purge" ?>" class="df-header-more-button df-header-more-button-purge" title="캐시 삭제">
+                          <i class="fa-solid fa-arrows-rotate"></i>
+                        </a>
                       </div>
                     </div>
                   </div>

@@ -6,7 +6,7 @@
     h4,
     h5,
     h6 {
-      border-color: $color-gray-200;
+      border-bottom: 1px solid $color-gray-200;
       padding-bottom: 0.4rem;
       font-weight: 600;
       word-break: keep-all;
@@ -50,6 +50,46 @@
           background-repeat: no-repeat;
           background-position: center;
           border-radius: 0.25rem;
+        }
+      }
+    }
+
+    #toc {
+      display: flex;
+      flex-direction: column;
+      width: max-content;
+      max-width: 100%;
+      background-color: $color-gray-100;
+      border: 0;
+      border-radius: 1rem;
+      padding: 0.625rem 1rem;
+      margin: 0.75rem 0;
+      line-height: 1;
+      font-size: 15px;
+
+      &::before {
+        content: '목차';
+        color: $color-gray-500;
+        font-size: 13px;
+        width: max-content;
+        line-height: 1;
+        user-select: none;
+      }
+
+      .toctitle {
+        display: none;
+      }
+
+      ul {
+        margin: 0;
+        list-style: none;
+
+        li {
+          margin: 0.5rem 0;
+
+          ul {
+            margin-left: 1rem;
+          }
         }
       }
     }

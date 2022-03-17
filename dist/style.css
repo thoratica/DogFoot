@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Pretendard Variable";
   font-weight: 45 920;
@@ -324,7 +325,7 @@
 #content #mw-content-text .mw-parser-output h4,
 #content #mw-content-text .mw-parser-output h5,
 #content #mw-content-text .mw-parser-output h6 {
-  border-color: #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
   padding-bottom: 0.4rem;
   font-weight: 600;
   word-break: keep-all;
@@ -363,6 +364,40 @@
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 0.25rem;
+}
+#content #mw-content-text .mw-parser-output #toc {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  max-width: 100%;
+  background-color: #f3f4f6;
+  border: 0;
+  border-radius: 1rem;
+  padding: 0.625rem 1rem;
+  margin: 0.75rem 0;
+  line-height: 1;
+  font-size: 15px;
+}
+#content #mw-content-text .mw-parser-output #toc::before {
+  content: "목차";
+  color: #6b7280;
+  font-size: 13px;
+  width: max-content;
+  line-height: 1;
+  user-select: none;
+}
+#content #mw-content-text .mw-parser-output #toc .toctitle {
+  display: none;
+}
+#content #mw-content-text .mw-parser-output #toc ul {
+  margin: 0;
+  list-style: none;
+}
+#content #mw-content-text .mw-parser-output #toc ul li {
+  margin: 0.5rem 0;
+}
+#content #mw-content-text .mw-parser-output #toc ul li ul {
+  margin-left: 1rem;
 }
 
 * {

@@ -1,147 +1,145 @@
 #content #mw-content-text {
-  .mw-parser-output {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      border-bottom: 1px solid $color-gray-200;
-      padding-bottom: 0.4rem;
-      font-weight: 600;
-      word-break: keep-all;
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    border-bottom: 1px solid $color-gray-200;
+    padding-bottom: 0.4rem;
+    font-weight: 600;
+    word-break: keep-all;
+  }
 
-    a {
-      font-weight: 500;
-      text-decoration: $color-transparent underline dotted;
-      transition: text-decoration-color 300ms ease-in-out;
+  a {
+    font-weight: 500;
+    text-decoration: $color-transparent underline dotted;
+    transition: text-decoration-color 300ms ease-in-out;
 
-      &:not(.new, .external) {
-        color: $color-blue-500;
+    &:not(.new, .external) {
+      color: $color-blue-500;
 
-        &:hover {
-          text-decoration-color: $color-blue-400;
-        }
-      }
-
-      &.new {
-        color: $color-red-500;
-
-        &:hover {
-          text-decoration-color: $color-red-400;
-        }
-      }
-
-      &.external:not(.sub-box-wrapper .sub-box .items .info a) {
-        color: $color-emerald-600;
-
-        &::before {
-          content: '';
-          height: 15px;
-          width: 15px;
-          margin-right: 3px;
-          position: relative;
-          top: 0.125rem;
-          display: inline-block;
-          background-color: $color-emerald-600;
-          background-image: url('https://dutkyo.wiki/images/5/58/Link.svg');
-          background-size: 85%;
-          background-repeat: no-repeat;
-          background-position: center;
-          border-radius: 0.25rem;
-        }
+      &:hover {
+        text-decoration-color: $color-blue-400;
       }
     }
 
-    #toc {
-      display: flex;
-      flex-direction: column;
-      width: max-content;
-      max-width: 100%;
-      background-color: $color-gray-100;
-      border: 0;
-      border-radius: 1rem;
-      padding: 0.625rem 1rem;
-      margin: 0.75rem 0;
-      line-height: 1;
-      font-size: 15px;
+    &.new {
+      color: $color-red-500;
+
+      &:hover {
+        text-decoration-color: $color-red-400;
+      }
+    }
+
+    &.external:not(.sub-box-wrapper .sub-box .items .info a) {
+      color: $color-emerald-600;
 
       &::before {
-        content: '목차';
-        color: $color-gray-500;
-        font-size: 13px;
-        width: max-content;
-        line-height: 1;
-        user-select: none;
+        content: '';
+        height: 15px;
+        width: 15px;
+        margin-right: 3px;
+        position: relative;
+        top: 0.125rem;
+        display: inline-block;
+        background-color: $color-emerald-600;
+        background-image: url('https://dutkyo.wiki/images/5/58/Link.svg');
+        background-size: 85%;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 0.25rem;
       }
+    }
+  }
 
-      .toctitle {
-        display: none;
-      }
+  #toc {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    max-width: 100%;
+    background-color: $color-gray-100;
+    border: 0;
+    border-radius: 1rem;
+    padding: 0.625rem 1rem;
+    margin: 0.75rem 0;
+    line-height: 1;
+    font-size: 15px;
 
-      ul {
-        margin: 0;
-        list-style: none;
+    &::before {
+      content: '목차';
+      color: $color-gray-500;
+      font-size: 13px;
+      width: max-content;
+      line-height: 1;
+      user-select: none;
+    }
 
-        li {
-          margin: 0.5rem 0;
+    .toctitle {
+      display: none;
+    }
 
-          ul {
-            margin-left: 1rem;
-          }
+    ul {
+      margin: 0;
+      list-style: none;
+
+      li {
+        margin: 0.5rem 0;
+
+        ul {
+          margin-left: 1rem;
         }
       }
     }
+  }
 
-    table {
-      background-color: #f8f9fa;
-      color: #202122;
-      margin: 1em 0;
-      border: 1px solid $color-gray-200;
-      border-collapse: collapse;
+  table {
+    background-color: #f8f9fa;
+    color: #202122;
+    margin: 1em 0;
+    border: 1px solid $color-gray-200;
+    border-collapse: collapse;
 
-      th,
-      td {
-        border-color: $color-gray-200 !important;
-      }
+    th,
+    td {
+      border-color: $color-gray-200 !important;
     }
+  }
 
-    table.wikitable {
-      border: 0;
-      border-collapse: separate;
-      border-spacing: 0;
-      border-radius: 0.7rem;
+  table.wikitable {
+    border: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 0.7rem;
 
-      tbody tr {
+    tbody tr {
+      :is(th, td) {
+        border-bottom-width: 0;
+        padding: 0.25rem 0.75rem;
+      }
+
+      &:first-child {
         :is(th, td) {
-          border-bottom-width: 0;
-          padding: 0.25rem 0.75rem;
-        }
+          &:first-child {
+            border-top-left-radius: 0.7rem;
+          }
 
-        &:first-child {
-          :is(th, td) {
-            &:first-child {
-              border-top-left-radius: 0.7rem;
-            }
-
-            &:last-child {
-              border-top-right-radius: 0.7rem;
-            }
+          &:last-child {
+            border-top-right-radius: 0.7rem;
           }
         }
+      }
 
-        &:last-child {
-          :is(th, td) {
-            border-bottom-width: 1px;
+      &:last-child {
+        :is(th, td) {
+          border-bottom-width: 1px;
 
-            &:first-child {
-              border-bottom-left-radius: 0.7rem;
-            }
+          &:first-child {
+            border-bottom-left-radius: 0.7rem;
+          }
 
-            &:last-child {
-              border-bottom-right-radius: 0.7rem;
-            }
+          &:last-child {
+            border-bottom-right-radius: 0.7rem;
           }
         }
       }

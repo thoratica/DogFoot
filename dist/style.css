@@ -319,38 +319,38 @@
   background-color: #fee2e2;
 }
 
-#content #mw-content-text .mw-parser-output h1,
-#content #mw-content-text .mw-parser-output h2,
-#content #mw-content-text .mw-parser-output h3,
-#content #mw-content-text .mw-parser-output h4,
-#content #mw-content-text .mw-parser-output h5,
-#content #mw-content-text .mw-parser-output h6 {
+#content #mw-content-text h1,
+#content #mw-content-text h2,
+#content #mw-content-text h3,
+#content #mw-content-text h4,
+#content #mw-content-text h5,
+#content #mw-content-text h6 {
   border-bottom: 1px solid #e5e7eb;
   padding-bottom: 0.4rem;
   font-weight: 600;
   word-break: keep-all;
 }
-#content #mw-content-text .mw-parser-output a {
+#content #mw-content-text a {
   font-weight: 500;
   text-decoration: transparent underline dotted;
   transition: text-decoration-color 300ms ease-in-out;
 }
-#content #mw-content-text .mw-parser-output a:not(.new, .external) {
+#content #mw-content-text a:not(.new, .external) {
   color: #3b82f6;
 }
-#content #mw-content-text .mw-parser-output a:not(.new, .external):hover {
+#content #mw-content-text a:not(.new, .external):hover {
   text-decoration-color: #60a5fa;
 }
-#content #mw-content-text .mw-parser-output a.new {
+#content #mw-content-text a.new {
   color: #ef4444;
 }
-#content #mw-content-text .mw-parser-output a.new:hover {
+#content #mw-content-text a.new:hover {
   text-decoration-color: #f87171;
 }
-#content #mw-content-text .mw-parser-output a.external:not(.sub-box-wrapper .sub-box .items .info a) {
+#content #mw-content-text a.external:not(.sub-box-wrapper .sub-box .items .info a) {
   color: #059669;
 }
-#content #mw-content-text .mw-parser-output a.external:not(.sub-box-wrapper .sub-box .items .info a)::before {
+#content #mw-content-text a.external:not(.sub-box-wrapper .sub-box .items .info a)::before {
   content: "";
   height: 15px;
   width: 15px;
@@ -365,7 +365,7 @@
   background-position: center;
   border-radius: 0.25rem;
 }
-#content #mw-content-text .mw-parser-output #toc {
+#content #mw-content-text #toc {
   display: flex;
   flex-direction: column;
   width: max-content;
@@ -378,7 +378,7 @@
   line-height: 1;
   font-size: 15px;
 }
-#content #mw-content-text .mw-parser-output #toc::before {
+#content #mw-content-text #toc::before {
   content: "목차";
   color: #6b7280;
   font-size: 13px;
@@ -386,53 +386,53 @@
   line-height: 1;
   user-select: none;
 }
-#content #mw-content-text .mw-parser-output #toc .toctitle {
+#content #mw-content-text #toc .toctitle {
   display: none;
 }
-#content #mw-content-text .mw-parser-output #toc ul {
+#content #mw-content-text #toc ul {
   margin: 0;
   list-style: none;
 }
-#content #mw-content-text .mw-parser-output #toc ul li {
+#content #mw-content-text #toc ul li {
   margin: 0.5rem 0;
 }
-#content #mw-content-text .mw-parser-output #toc ul li ul {
+#content #mw-content-text #toc ul li ul {
   margin-left: 1rem;
 }
-#content #mw-content-text .mw-parser-output table {
+#content #mw-content-text table {
   background-color: #f8f9fa;
   color: #202122;
   margin: 1em 0;
   border: 1px solid #e5e7eb;
   border-collapse: collapse;
 }
-#content #mw-content-text .mw-parser-output table th,
-#content #mw-content-text .mw-parser-output table td {
+#content #mw-content-text table th,
+#content #mw-content-text table td {
   border-color: #e5e7eb !important;
 }
-#content #mw-content-text .mw-parser-output table.wikitable {
+#content #mw-content-text table.wikitable {
   border: 0;
   border-collapse: separate;
   border-spacing: 0;
   border-radius: 0.7rem;
 }
-#content #mw-content-text .mw-parser-output table.wikitable tbody tr :is(th, td) {
+#content #mw-content-text table.wikitable tbody tr :is(th, td) {
   border-bottom-width: 0;
   padding: 0.25rem 0.75rem;
 }
-#content #mw-content-text .mw-parser-output table.wikitable tbody tr:first-child :is(th, td):first-child {
+#content #mw-content-text table.wikitable tbody tr:first-child :is(th, td):first-child {
   border-top-left-radius: 0.7rem;
 }
-#content #mw-content-text .mw-parser-output table.wikitable tbody tr:first-child :is(th, td):last-child {
+#content #mw-content-text table.wikitable tbody tr:first-child :is(th, td):last-child {
   border-top-right-radius: 0.7rem;
 }
-#content #mw-content-text .mw-parser-output table.wikitable tbody tr:last-child :is(th, td) {
+#content #mw-content-text table.wikitable tbody tr:last-child :is(th, td) {
   border-bottom-width: 1px;
 }
-#content #mw-content-text .mw-parser-output table.wikitable tbody tr:last-child :is(th, td):first-child {
+#content #mw-content-text table.wikitable tbody tr:last-child :is(th, td):first-child {
   border-bottom-left-radius: 0.7rem;
 }
-#content #mw-content-text .mw-parser-output table.wikitable tbody tr:last-child :is(th, td):last-child {
+#content #mw-content-text table.wikitable tbody tr:last-child :is(th, td):last-child {
   border-bottom-right-radius: 0.7rem;
 }
 

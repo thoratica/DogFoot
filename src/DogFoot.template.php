@@ -119,30 +119,7 @@ class DogFootTemplate extends BaseTemplate
               </div>
             </div>
             <div class="df-header-categories">
-              <?php
-              $html = $this->data["skin"]->getCategoryLinks();
 
-              if ($html !== "") {
-                $tmplist1 = explode("<li><a href=\"", explode("</ul>", explode("<ul>", $html)[1])[0]);
-
-                array_shift($tmplist1);
-
-                foreach ($tmplist1 as $tmp1) {
-                  $tmplist2 = explode("\" title=\"", $tmp1);
-                  $tmplist3 = explode("\">", $tmplist2[1]);
-                  $tmplist4 = explode("\" class=\"", $tmplist2[0]);
-                  $tmplist5 = explode("</a></li>", $tmplist3[1]);
-
-                  $href = $tmplist4[0];
-                  $title = $tmplist3[0];
-                  $exists = sizeof($tmplist4) >= 2 && $tmplist4[1] === "new";
-                  $text = $tmplist5[0];
-              ?>
-                  <a href="<?php echo $href ?>" class="df-header-category<?php echo $exists ? " df-header-category-new" : "" ?>" title="<?php echo $title ?>"><?php echo $text ?></a>
-              <?php
-                }
-              }
-              ?>
             </div>
           </div>
           <section id="content">

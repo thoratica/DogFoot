@@ -151,8 +151,25 @@ class DogFootTemplate extends BaseTemplate
         </article>
       </section>
     </div>
+    <script>
+      const debounce = (fn) => {
+        let frame;
 
-    </html>
+        return (...params) => {
+          if (frame) cancelAnimationFrame(frame);
+
+          frame = requestAnimationFrame(() => fn(...params));
+        }
+      };
+
+      const storeScroll = () => document.documentElement.dataset.scroll = window.scrollY;
+
+      document.addEventListener('scroll', debounce(storeScroll), {
+        passive: true
+      });
+
+      storeScroll();
+    </script>
 <?php
   }
 }

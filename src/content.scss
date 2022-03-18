@@ -11,6 +11,11 @@
     word-break: keep-all;
   }
 
+  ol,
+  ul {
+    padding: 0.3rem 0 0 1.6rem !important;
+  }
+
   a {
     font-weight: 500;
     text-decoration: $color-transparent underline dotted;
@@ -117,6 +122,7 @@
       :is(th, td) {
         border-bottom-width: 0;
         padding: 0.25rem 0.75rem;
+        white-space: pre-wrap;
       }
 
       &:first-child {

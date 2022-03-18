@@ -330,6 +330,10 @@
   font-weight: 600;
   word-break: keep-all;
 }
+#content #mw-content-text ol,
+#content #mw-content-text ul {
+  padding: 0.3rem 0 0 1.6rem !important;
+}
 #content #mw-content-text a {
   font-weight: 500;
   text-decoration: transparent underline dotted;
@@ -420,6 +424,7 @@
 #content #mw-content-text table.wikitable tbody tr :is(th, td) {
   border-bottom-width: 0;
   padding: 0.25rem 0.75rem;
+  white-space: pre-wrap;
 }
 #content #mw-content-text table.wikitable tbody tr:first-child :is(th, td):first-child {
   border-top-left-radius: 0.7rem;

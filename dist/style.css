@@ -330,9 +330,8 @@
   font-weight: 600;
   word-break: keep-all;
 }
-#content #mw-content-text ol,
-#content #mw-content-text ul {
-  margin: 0.3rem 0 0 1.6rem !important;
+#content #mw-content-text :is(ol, ul):not(#toc > ul) {
+  margin: 0.3rem 0 0 1rem !important;
 }
 #content #mw-content-text a {
   font-weight: 500;
@@ -400,9 +399,6 @@
 }
 #content #mw-content-text #toc ul li {
   margin: 0.5rem 0;
-}
-#content #mw-content-text #toc ul li ul {
-  margin-left: 1rem;
 }
 #content #mw-content-text table {
   background-color: #f8f9fa;

@@ -11,9 +11,8 @@
     word-break: keep-all;
   }
 
-  ol,
-  ul {
-    margin: 0.3rem 0 0 1.6rem !important;
+  :is(ol, ul):not(#toc > ul) {
+    margin: 0.3rem 0 0 1rem !important;
   }
 
   a {
@@ -91,10 +90,6 @@
 
       li {
         margin: 0.5rem 0;
-
-        ul {
-          margin-left: 1rem;
-        }
       }
     }
   }
